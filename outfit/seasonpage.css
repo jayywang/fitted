@@ -1,0 +1,48 @@
+
+        #header{
+            width: 100%;
+        }
+        #graphic{
+            width: 60%;
+            margin: auto;
+            padding: 10px;
+            height: 300px;
+        }
+        .pic{
+            width: 15%;
+            height: 250px;
+            float: left;
+            padding: 5px;
+        }
+        #outfits{
+            width: 90%;
+            margin: auto;
+            padding: 10px;
+        }
+        #outfit{
+            width: 30%;
+            border-radius:10px 10px 10px 10px;
+            border: solid 1px  rgb(57, 43, 28);
+            float: left;
+            padding: 10px;
+            margin: 10px;
+
+        }
+        .opic{
+            width: 95%;
+            height: 425px;
+            padding: 10px;
+            margin: auto;
+        }
+        a{
+            text-decoration: none;
+            color:rgb(0, 0, 0)
+        }
+        a:hover{
+            border-radius:20px 20px 20px 20px;
+            border: solid 1px  rgb(57, 43, 28);
+        }
+
+
+
+
