@@ -1,0 +1,151 @@
+body {
+    background-color: #EAEAEA;
+    color: black;
+    font-family: 'Helvetica Neue';
+
+}
+
+.header {
+    width: 95%;
+    overflow: hidden
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 340.173px;
+    line-height: 415px;
+    letter-spacing: 0.05em;
+    margin: 0px;
+}
+
+.heading {
+    text-align: center;
+}
+
+.headingtext{
+    text-decoration: none;
+    
+}
+
+
+.nav {
+    float: right;
+    font-size: 18px;
+    font-weight: normal;
+    color: black;
+    text-decoration: none;
+    line-height: 50px;
+    margin: 10px;
+}
+
+.nav:hover {
+    color: #8a837c;
+}
+
+.searchcontainer {
+    border: black;
+    position: absolute;
+    width: max-content;
+    margin-top: 13px;
+    padding: 10px;
+    margin-left: 50px;
+
+}
+
+.searchbar {
+    background-color: #EAEAEA;
+    border-color: black;
+    border-width: 1.5px;
+    border-radius: 5px;
+    background-image: url('searchicon.png');
+    background-position: 6px 5px;
+    background-repeat: no-repeat;
+    background-size: 15px;
+    padding: 6px 16px 6px 30px;
+}
+
+.container {
+    width: 95%;
+    margin-left: 120px;
+}
+
+
+.title {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 85px;
+    line-height: 122px;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: black;
+}
+
+.subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 17.8977px;
+    line-height: 21px;
+    text-transform: uppercase;
+    padding: 10px;
+    color: black;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+.leftblock {
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    flex-flow: wrap;
+    padding: 20px;
+}
+
+.box {
+    width: 220px;
+    float: left;
+    padding-right: 100px;
+}
+
+.whosection {
+    padding: 20px;
+    width: 100%;
+}
+
+.whosection p {
+    font-size: 15px;
+}
+
+.whosection h3 {
+    font-size: 17px;
+}
+
+.headshot {
+    width: 208px;
+    height: 250px;
+}
+
+.clear {
+    clear: both;
+}
+
+.howsection {
+    padding: 20px;
+    width: 100%;
+}
+
+.step {
+    border-width: 1.5px;
+    border: 1px solid #000000;
+    border-radius: 7px;
+    padding: 6px;
+    width: 116px;
+}
+
+.whysection {
+    padding: 20px;
+    width: 65%;
+    font-size: 15px;
+    line-height: normal;
+}
