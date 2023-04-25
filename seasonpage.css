@@ -281,11 +281,13 @@
                 float: left;
                 padding: 10px;
                 margin: 10px;
+                display: flex;
+                justify-content: center;
     
             }
             .opic{
                 width: 95%;
-                height: 315px;
+                height: 280px;
                 padding: 10px;
                 margin: auto;
                 border-radius:10px 10px 10px 10px;
