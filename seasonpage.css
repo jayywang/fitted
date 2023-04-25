@@ -291,8 +291,12 @@
                 padding: 10px;
                 margin: auto;
                 border-radius:10px 10px 10px 10px;
-    
             }
+            #text{
+                clear: both;
+                width: 95%;
+            }
+           
 
 
           
