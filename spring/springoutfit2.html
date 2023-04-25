@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>
+           Fitted | Seasonal Outfit
+        </title>
+        <meta charset="utf-8">
+        <meta name="description" content="HTML Basics">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link rel="stylesheet" href="outfit.css">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="responsive.css">
+
+    <style>
+        #outfitphotos {
+            position: -webkit- sticky;
+            position: sticky;
+            top: 0;
+            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            width: 100%;
+        }
+
+        @media screen and (max-width: 640px) {
+            #header {
+                width: 100%;
+            }
+            #header p {
+                padding-right: 10px;
+            }
+            .searchbar {
+                width: 100%;
+            }
+            #content {
+                flex-direction: column;
+            }
+            #leftside {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            #rightside img {
+                width: 100%;
+                height: auto;
+            }
+            #rightside p {
+                width: 90%;
+            }
+
+            .header {
+            width: 100%;
+            padding-top: 50px;
+            }
+
+            .nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+                margin: 0;
+                width: 50%;
+            }
+
+            .searchcontainer {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 25px;
+                margin-left: 165px;
+            }
+
+            .searchbar {
+                width: 100%;
+            }
+        }
+    
+    </style>
+    </head>
+    <body>
+        <div class="header">
+            <a href="spring.html" class="nav">Spring</a>
+                <a href="summer.html" class="nav">Summer</a>
+                <a href="fall.html" class="nav">Fall</a>
+                <a href="winter.html" class="nav">Winter</a>
+    
+            <div class="searchcontainer">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search" class="searchbar">
+    
+                </form>
+            </div>
+        </div>
+
+
+        <div id="content">
+            <div id="leftside">
+                <br><br><br><br><br><br><br>
+                <div id="outfitphotos">
+                    <img style="width: 300px;" src="img/outfit2/mainpic1.jpg">
+                    <br>
+                    <img style="width: 300px;" src="img/outfit2/mainpic2.jpg">
+                    <br>
+                    <img style="width: 300px;" src="img/outfit2/mainpic3.jpg">
+                    <br><br><br>
+                </div>
+
+            </div>
+
+            
+
+            <div id="rightside">
+                <br><br><br><br>
+                <h1>Black Gray White</h1>
+                <p>A simple outfit made up of just three colors: black, gray, and white. This color combination combined with the cozy warm fit is perfect for a gloomy spring day.</p>
+                <br>
+                    
+                    <img style="width: 350px; height: 350px;" src="img/outfit2/sweater.png">
+                    <br><br>
+                    <img style="width: 350px; height: 350px;" src="img/outfit2/tshirt.png">
+                    <br><br>
+                    <img style="width: 300px; height: 500px;" src="img/outfit2/pants.png">
+                    <br>
+                    <img style="width: 300px; height: 200px;" src="img/outfit2/shoe.png">
+                    <br><br>
+            </div>
+        </div>
+
+
+        <div id="footer">
+            <p>Footer Content</p>
+        </div>
+    </body>
+</html>
