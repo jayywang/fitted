@@ -9,6 +9,8 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <link rel="stylesheet" href="outfit.css">
+        <link rel="stylesheet" href="nav.css">
+        <link rel="stylesheet" href="responsive.css">
 
     <style>
         #outfitphotos {
@@ -22,12 +24,76 @@
             
             width: 100%;
         }
+
+        @media screen and (max-width: 640px) {
+            #header {
+                width: 100%;
+            }
+            #header p {
+                padding-right: 10px;
+            }
+            .searchbar {
+                width: 100%;
+            }
+            #content {
+                flex-direction: column;
+            }
+            #leftside {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            #rightside img {
+                width: 100%;
+                height: auto;
+            }
+            #rightside p {
+                width: 90%;
+            }
+
+            .header {
+            width: 100%;
+            padding-top: 50px;
+            }
+
+            .nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+                margin: 0;
+                width: 50%;
+            }
+
+            .searchcontainer {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 25px;
+                margin-left: 165px;
+            }
+
+            .searchbar {
+                width: 100%;
+            }
+        }
     
     </style>
     </head>
     <body>
-        <div id="header">
-            <p><strong>FITTED</strong></p>
+        <div class="header">
+            <a href="spring.html" class="nav">Spring</a>
+                <a href="summer.html" class="nav">Summer</a>
+                <a href="fall.html" class="nav">Fall</a>
+                <a href="winter.html" class="nav">Winter</a>
+    
+            <div class="searchcontainer">
+                <form action="/action_page.php">
+                    <input type="text" placeholder="Search.." name="search" class="searchbar">
+    
+                </form>
+            </div>
         </div>
 
 
