@@ -20,13 +20,37 @@ h1 {
 
 .heading {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+   
 }
 
 .headingtext{
     text-decoration: none;
     
+    font-weight: 700;
+    font-size: 50px;
+    letter-spacing: 0.05em;
+    margin: 0px;
+    color: black;
 }
 
+.headingtext a {
+    color: black;
+}
+
+.headingtext a:hover {
+    color: #8a837c;
+}
+
+#headingseasons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 80%;
+}
 
 .nav {
     float: right;
@@ -148,4 +172,75 @@ h1 {
     width: 65%;
     font-size: 15px;
     line-height: normal;
+}
+
+@media screen and (max-width: 640px) {
+    h1 {
+        font-weight: 700;
+        font-size: 120px;
+        line-height: 100px;
+        letter-spacing: 0.05em;
+        margin: 0px;
+    }
+
+    .titlepics {
+        width: 100%;
+        position: relative;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        margin: 0px;
+    }
+
+    .whosection {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    .howsection {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+        .heading {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    
+    }
+
+    .headingtext{
+        text-decoration: none;
+        
+        font-weight: 700;
+        font-size: 22px;
+        letter-spacing: 0.05em;
+        margin: 0px;
+        color: black;
+    }
+
+    .headingtext a {
+        color: black;
+    }
+
+    .headingtext a:hover {
+        color: #8a837c;
+    }
+
+    #headingseasons {
+        line-height: 50px;
+    }
 }
