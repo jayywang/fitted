@@ -114,14 +114,49 @@
                 <h1>Corduroy Brown</h1>
                 <p>Corduroy Brown layers a dress shirt, turtleneck, and corduroy jacket to achieve visual interest and keep the wearer warm throughout the harsh winter. Elevated with classy boots, this look is ready to take on any task.</p>
                 <br>
-                    <img style="width: 300px; height: 400px;" src="img/outfit1/washirt.png">
-                    <img style="width: 225px; height: 450px;" src="img/outfit1/wanuttonup.png">
+                     <div class="pics" id="pic1">
+                        <img style="width: 350px; height: 350px;" src="img/outfit1/washirt.png">
+                        <div class="buttons" id="button1">
+                        <div class="like"><a href=></a>like</div>
+                        <div class="cart"><a href=></a>add to cart</div>
+                        <div class="link"><a href=></a>link</div>
+                        </div>
+                    </div>
+                     <div class="pics" id="pic2">
+                        <img style="width: 350px; height: 350px;" src="img/outfit1/wabuttonup.png">
+                        <div class="buttons" id="button2">
+                        <div class="like"><a href=></a>like</div>
+                        <div class="cart"><a href=></a>add to cart</div>
+                        <div class="link"><a href=></a>link</div>
+                        </div>
+                    </div>
                     <br>
-                    <img style="width: 250px; height: 450px;" src="img/outfit1/waturtleneck.png">
+                     <div class="pics" id="pic3">
+                        <img style="width: 350px; height: 350px;" src="img/outfit1/waturtle.png">
+                        <div class="buttons" id="button3">
+                        <div class="like"><a href=></a>like</div>
+                        <div class="cart"><a href=></a>add to cart</div>
+                        <div class="link"><a href=></a>link</div>
+                        </div>
+                    </div>
                     <br><br>
-                    <img style="width: 300px; height: 400px;" src="img/outfit1/pants.png">
+                     <div class="pics" id="pic4">
+                        <img style="width: 350px; height: 350px;" src="img/outfit1/pants.png">
+                        <div class="buttons" id="button4">
+                        <div class="like"><a href=></a>like</div>
+                        <div class="cart"><a href=></a>add to cart</div>
+                        <div class="link"><a href=></a>link</div>
+                        </div>
+                    </div>
                     <br><br>
-                    <img style="width: 300px; height: 175px;" src="img/outfit1/waboots.png">
+                     <div class="pics" id="pic5">
+                        <img style="width: 350px; height: 350px;" src="img/outfit1/waboots.png">
+                        <div class="buttons" id="button5">
+                        <div class="like"><a href=></a>like</div>
+                        <div class="cart"><a href=></a>add to cart</div>
+                        <div class="link"><a href=></a>link</div>
+                        </div>
+                    </div>
                     <br><br>
             </div>
         </div>
@@ -130,5 +165,74 @@
         <div id="footer">
             <p>Footer Content</p>
         </div>
+        
+        <script>
+           $(document).ready(function() {
+            // Hide the div initially
+            $("#button1").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic1").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button1").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button1").hide();
+            });
+            });
+
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#button2").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic2").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button2").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button2").hide();
+            });
+            });
+
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#button3").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic3").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button3").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button3").hide();
+            });
+            });
+
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#button4").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic4").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button4").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button4").hide();
+            });
+            });
+            
+             $(document).ready(function() {
+            // Hide the div initially
+            $("#button5").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic5").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button5").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button5").hide();
+            });
+            });
+
+
+        </script>
     </body>
 </html>
