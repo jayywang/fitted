@@ -10,25 +10,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="jquery-3.6.4.min.js"></script>
     <link rel="stylesheet" type="text/css" href="fittedhome.css">
+    <link rel="stylesheet" type="text/css" href="slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="slick/slick-theme.css" />
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+
+    <style>
+        .whosection {
+            display: none;
+        }
+
+
+        .howsection {
+            display: none;
+        }
+
+        .whysection {
+            display: none;
+            margin-top: -25px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
 </head>
 
 
 <body>
     <div class="header">
-        <a href="index.html#why" class="nav">Why</a>
-        <a href="index.html#how" class="nav">How</a>
-        <a href="index.html#who" class="nav">Who</a>
+        <a href="index.html#why" class="nav" id="whynav">Why</a>
+        <a href="index.html#how" class="nav" id="hownav">How</a>
+        <a href="index.html#who" class="nav" id="whonav">Who</a>
 
         <div class="searchcontainer">
             <form action="/action_page.php">
                 <input type="text" placeholder="Search.." name="search" class="searchbar">
-
             </form>
         </div>
     </div>
 
     <br><br><br>
-    
+
     <div class="heading">
         <h1>FITTED</h1>
         <div id="headingseasons">
@@ -49,17 +73,16 @@
 
     <!--BOTTOM SECTION-->
     <div class="container">
-        <a href="">
-            <div id="who" class="leftblock eventblock child">
-                <div class=title>
-                    <div class="inline-block">who</div>
-                </div>
-                <div class=subtitle>
-                    <div class="inline-block">ARE THE</br>PUBLISHERS</div>
-                </div>
-
+        <div id="who" class="leftblock eventblock child">
+            <div class=title>
+                <div class="inline-block">who</div>
             </div>
-        </a>
+            <div class=subtitle>
+                <div class="inline-block">ARE THE</br>PUBLISHERS</div>
+            </div>
+
+        </div>
+
 
         <div class="whosection">
             <div class="box">
@@ -84,7 +107,8 @@
                 <img src="us_pics/eileen.png" alt="eileen" class="headshot">
                 <br>
                 <h3>EILEEN MOU</h3>
-                <p>My name is Eileen Mou and I currently study design at USC Roski and plan to minor in Designing Multimedia
+                <p>My name is Eileen Mou and I currently study design at USC Roski and plan to minor in Designing
+                    Multimedia
                     Experiences. I love to explore the different intersections of design through a needs-conscious lens.
                 </p>
             </div>
@@ -92,22 +116,22 @@
 
         </div>
 
-            <div id="how" class="leftblock eventblock child">
-                <div class=title>
-                    <div class="inline-block">how</div>
-                </div>
-                <div class=subtitle>
-                    <div class="inline-block">to use</br>this website</div>
-                </div>
+        <div id="how" class="leftblock eventblock child">
+            <div class=title>
+                <div class="inline-block">how</div>
             </div>
-        </a>
+            <div class=subtitle>
+                <div class="inline-block">to use</br>this website</div>
+            </div>
+        </div>
+
 
         <div class="howsection">
             <div class="box">
                 <div class="step">Step 1</div>
                 <br>
                 <h3>FIND YOUR LOOK</h3>
-                <p>Finding your look can be hard, buT we’re here to help you through all the seasons! Select a season
+                <p>Finding your look can be hard, but we’re here to help you through all the seasons! Select a season
                     and browse through the different outfit options & combinations.</p>
             </div>
 
@@ -130,41 +154,156 @@
 
         </div>
 
-            <div id="why" class="leftblock eventblock child">
-                <div class=title>
-                    <div class="inline-block">why</div>
-                </div>
-                <div class=subtitle>
-                    <div class="inline-block">does</br>fitted exist</div>
-                </div>
+        <div id="why" class="leftblock eventblock child">
+            <div class=title>
+                <div class="inline-block">why</div>
             </div>
-        </a>
+            <div class=subtitle>
+                <div class="inline-block">does</br>fitted exist</div>
+            </div>
+        </div>
+
 
         <div class="whysection">
-            Our mission is to create a platform that promotes sustainable, affordable, and inclusive fashion choices for
-            everyone. We strive to help our users find and purchase stylish apparel items that align with their values,
-            without compromising aesthetics. Our website aims to provide an easy-to-navigate platform for finding and
-            purchasing popular fashion items seen on social media. We offer a diverse selection of items from different
-            price ranges, with a focus on ethically made and gender-neutral clothing options. Our goal is to promote a
-            more conscious approach to fashion while ensuring that our users feel confident and stylish in their
-            choices.
+            <p>Our mission is to create a platform that promotes sustainable, affordable, and inclusive fashion choices
+                for
+                everyone. We strive to help our users find and purchase stylish apparel items that align with their
+                values,
+                without compromising aesthetics. Our website aims to provide an easy-to-navigate platform for finding
+                and
+                purchasing popular fashion items seen on social media. We offer a diverse selection of items from
+                different
+                price ranges, with a focus on ethically made and gender-neutral clothing options. Our goal is to promote
+                a
+                more conscious approach to fashion while ensuring that our users feel confident and stylish in their
+                choices.</p>
         </div>
     </div>
 
-<script>
-    $("who").on("hover". function () {
-             $("whosection").slideToggle(1000);
-    })
-    
-    $("how").on("hover". function () {
-             $("howsection").slideToggle(1000);
-    })
-    
-    $("why").on("hover". function () {
-             $("whysection").slideToggle(1000);
-    })
-</script>
+    <div class="m_autoplay">
+        <div class="m_testpics">
+            <img
+                src="https://ci4.googleusercontent.com/proxy/XGuedsmv2z71Xr602njW-ptcjw4nxKIUhoiDG59UiX4RDwHrPnghsmJ1oVl5KMTKKnZ7srtbg5AWqmDhCXuAyum9Gy1bWw-RDds=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer1.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci6.googleusercontent.com/proxy/hQQRZixZpSPbWiudTFikSqezT2ci2jlBcGUdZf7wypqL3Pw6c8F-_NKJRKKaD8RfaqXB2fBXOoHPuJ5lwQT-yxByB7xVmNgxbEk=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer2.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci5.googleusercontent.com/proxy/E5Lab7jcRCI-mMNd6Q1mOg2PGztQUB4QgBhvg3Klz6PYltyIrp61SMfR68t1mRsbzL2g0N6yNMrSvMTqFNLuc3RLZpeMqvs9PYE=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer3.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci3.googleusercontent.com/proxy/MUW4ooFZ5EO-2kKOwYjDpTZ3a_krnecnUeVFt4lif5HzDY0MSRMwFiAYH3SA4qWFL8OP6fzHX7l8UUPpnrQqdw9NXZNOWSI=s0-d-e1-ft#https://jayywang.github.io/fitted/images/summer4.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci5.googleusercontent.com/proxy/E5Lab7jcRCI-mMNd6Q1mOg2PGztQUB4QgBhvg3Klz6PYltyIrp61SMfR68t1mRsbzL2g0N6yNMrSvMTqFNLuc3RLZpeMqvs9PYE=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer3.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci4.googleusercontent.com/proxy/XGuedsmv2z71Xr602njW-ptcjw4nxKIUhoiDG59UiX4RDwHrPnghsmJ1oVl5KMTKKnZ7srtbg5AWqmDhCXuAyum9Gy1bWw-RDds=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer1.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci6.googleusercontent.com/proxy/hQQRZixZpSPbWiudTFikSqezT2ci2jlBcGUdZf7wypqL3Pw6c8F-_NKJRKKaD8RfaqXB2fBXOoHPuJ5lwQT-yxByB7xVmNgxbEk=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer2.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci5.googleusercontent.com/proxy/E5Lab7jcRCI-mMNd6Q1mOg2PGztQUB4QgBhvg3Klz6PYltyIrp61SMfR68t1mRsbzL2g0N6yNMrSvMTqFNLuc3RLZpeMqvs9PYE=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer3.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci3.googleusercontent.com/proxy/MUW4ooFZ5EO-2kKOwYjDpTZ3a_krnecnUeVFt4lif5HzDY0MSRMwFiAYH3SA4qWFL8OP6fzHX7l8UUPpnrQqdw9NXZNOWSI=s0-d-e1-ft#https://jayywang.github.io/fitted/images/summer4.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci5.googleusercontent.com/proxy/E5Lab7jcRCI-mMNd6Q1mOg2PGztQUB4QgBhvg3Klz6PYltyIrp61SMfR68t1mRsbzL2g0N6yNMrSvMTqFNLuc3RLZpeMqvs9PYE=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer3.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci4.googleusercontent.com/proxy/XGuedsmv2z71Xr602njW-ptcjw4nxKIUhoiDG59UiX4RDwHrPnghsmJ1oVl5KMTKKnZ7srtbg5AWqmDhCXuAyum9Gy1bWw-RDds=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer1.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci6.googleusercontent.com/proxy/hQQRZixZpSPbWiudTFikSqezT2ci2jlBcGUdZf7wypqL3Pw6c8F-_NKJRKKaD8RfaqXB2fBXOoHPuJ5lwQT-yxByB7xVmNgxbEk=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer2.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci5.googleusercontent.com/proxy/E5Lab7jcRCI-mMNd6Q1mOg2PGztQUB4QgBhvg3Klz6PYltyIrp61SMfR68t1mRsbzL2g0N6yNMrSvMTqFNLuc3RLZpeMqvs9PYE=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer3.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci3.googleusercontent.com/proxy/MUW4ooFZ5EO-2kKOwYjDpTZ3a_krnecnUeVFt4lif5HzDY0MSRMwFiAYH3SA4qWFL8OP6fzHX7l8UUPpnrQqdw9NXZNOWSI=s0-d-e1-ft#https://jayywang.github.io/fitted/images/summer4.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci5.googleusercontent.com/proxy/E5Lab7jcRCI-mMNd6Q1mOg2PGztQUB4QgBhvg3Klz6PYltyIrp61SMfR68t1mRsbzL2g0N6yNMrSvMTqFNLuc3RLZpeMqvs9PYE=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer3.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci4.googleusercontent.com/proxy/XGuedsmv2z71Xr602njW-ptcjw4nxKIUhoiDG59UiX4RDwHrPnghsmJ1oVl5KMTKKnZ7srtbg5AWqmDhCXuAyum9Gy1bWw-RDds=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer1.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci6.googleusercontent.com/proxy/hQQRZixZpSPbWiudTFikSqezT2ci2jlBcGUdZf7wypqL3Pw6c8F-_NKJRKKaD8RfaqXB2fBXOoHPuJ5lwQT-yxByB7xVmNgxbEk=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer2.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci5.googleusercontent.com/proxy/E5Lab7jcRCI-mMNd6Q1mOg2PGztQUB4QgBhvg3Klz6PYltyIrp61SMfR68t1mRsbzL2g0N6yNMrSvMTqFNLuc3RLZpeMqvs9PYE=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer3.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci3.googleusercontent.com/proxy/MUW4ooFZ5EO-2kKOwYjDpTZ3a_krnecnUeVFt4lif5HzDY0MSRMwFiAYH3SA4qWFL8OP6fzHX7l8UUPpnrQqdw9NXZNOWSI=s0-d-e1-ft#https://jayywang.github.io/fitted/images/summer4.png">
+        </div>
+        <div class="m_testpics">
+            <img
+                src="https://ci5.googleusercontent.com/proxy/E5Lab7jcRCI-mMNd6Q1mOg2PGztQUB4QgBhvg3Klz6PYltyIrp61SMfR68t1mRsbzL2g0N6yNMrSvMTqFNLuc3RLZpeMqvs9PYE=s0-d-e1-ft#https://jayywang.github.io/fitted/images/fitsummer3.png">
+        </div>
+    </div>
 
+
+    <script>
+        $("#who").on("click", function () {
+            $(".whosection").slideToggle(1000);
+        })
+
+        $("#how").on("click", function () {
+            $(".howsection").slideToggle(1000);
+        })
+
+        $("#why").on("click", function () {
+            $(".whysection").slideToggle(1000);
+        })
+
+        $("#whynav").on("click", function () {
+            $(".whysection").slideToggle(1000);
+        })
+
+        $("#whonav").on("click", function () {
+            $(".whosection").slideToggle(1000);
+        })
+
+        $("#hownav").on("click", function () {
+            $(".howsection").slideToggle(1000);
+        })
+    </script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('.autoplay').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 500,
+      });
+  });
+</script>
 
 </body>
 
