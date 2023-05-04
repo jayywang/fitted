@@ -115,14 +115,14 @@
                     <div class="pics" id="pic1">
                         <img style="width: 325px; height: 275px;" src="img/outfit4/hat.png">
                         <div class="buttons" id="button1">
-                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="cart" onclick="addItem(48.00)">add to cart</div>
                             <div class="link"><a href="https://www.hatclub.com/products/exclusive-new-era-59fifty-oakland-athletics-1995-road-hat-green?variant=29262372077643&currency=USD&utm_medium=product_sync&utm_source=google&utm_content=sag_organic&utm_campaign=sag_organic&gclid=CjwKCAjw586hBhBrEiwAQYEnHbJF8mlx3g0VtIuOqG5S8sRrstTcCTmNBQ-oQWIQh0Kgcw803GN33BoCaP8QAvD_BwE" target="_blank">link</a></div>
                         </div>
                     </div>
                      <div class="pics" id="pic2">
                         <img style="width: 400px; height: 300px;" src="img/outfit4/shirt.png">
                         <div class="buttons" id="button2">
-                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="cart" onclick="addItem(29.90)">add to cart</div>
                             <div class="link"><a href="https://www.uniqlo.com/us/en/products/E440522-000/00?colorDisplayCode=01&sizeDisplayCode=008" target="_blank">link</a></div>
                         </div>
                     </div>
@@ -130,7 +130,7 @@
                      <div class="pics" id="pic3">
                         <img style="width: 400px; height: 450px;" src="img/outfit4/pants.png">
                         <div class="buttons" id="button3">
-                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="cart" onclick="addItem(128.00)">add to cart</div>
                             <div class="link"><a href="https://shop.lululemon.com/p/men-pants/Utilitech-Pull-On-Relaxed-Pant-27/_/prod11110116?color=54151&sz=M&locale=en_US&sl=US&CID=Google_PMAX_US_NAT_EN_M_Hybrid_Men_GEN_Y22_ag=&gclid=CjwKCAjw586hBhBrEiwAQYEnHZz6VnB6nnJDNUfkDo-yfGKc1Rr93YBGNEcUOGMEb2CRQeD2qUKnxxoCPs8QAvD_BwE&gclsrc=aw.ds" target="_blank">link</a></div>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                      <div class="pics" id="pic4">
                         <img style="width: 300px; height: 175px;" src="img/outfit4/shoes.png">
                         <div class="buttons" id="button4">
-                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="cart" onclick="addItem(150.00)">add to cart</div>
                             <div class="link"><a href="https://www.drmartens.com/us/en/adrian-smooth-leather-tassel-loafers/p/24369001?gclid=CjwKCAjwjMiiBhA4EiwAZe6jQ6sGZ1h3AznJTHdLPZ8Fm5wTVjcnMFPmHRywvYX488d4CMfM9F5RkBoCpswQAvD_BwE" target="_blank">link</a></div>
                         </div>
                     </div>
@@ -150,6 +150,7 @@
         <div id="hiddenDiv">
             <p class="close" style="text-align: right;">X</p>
             <h2>You have <span id="item">1</span> item in your shopping cart!</h2>
+            <div id="subtotal"></div>
             <br><br>
         </div>
 
@@ -205,6 +206,32 @@
             $("#button4").hide();
             });
             });
+            
+             $(document).ready(function() {
+            // Hide the div initially
+            $("#button5").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic5").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button5").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button5").hide();
+            });
+            });
+            
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#button6").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic6").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button6").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button6").hide();
+            });
+            });
         </script>
         
         <script>
@@ -220,42 +247,15 @@
         </script>
         
         <script>
-        // function to read the value of a cookie
-            function getCookie(name) {
-                var value = "; " + document.cookie;
-                var parts = value.split("; " + name + "=");
-                if (parts.length == 2) return parts.pop().split(";").shift();
-            }
+            let total = 0;
+            let clicks = 0;
 
-            // function to set the value of a cookie
-            function setCookie(name, value, days) {
-                var expires = "";
-                if (days) {
-                    var date = new Date();
-                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                    expires = "; expires=" + date.toUTCString();
-                }
-                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            function addItem(price) {
+            clicks++;
+            total += price;
+            document.getElementById("subtotal").innerHTML = "Subtotal: $" + total;
+            document.getElementById("item").innerHTML = clicks;
+            sessionStorage.setItem('total', total);
+            sessionStorage.setItem('clicks', clicks);
             }
-
-            // function to add an item to the cart
-            function addItem() {
-                var count = getCookie("itemCount");
-                if (!count) {
-                    count = 1;
-                } else {
-                    count = parseInt(count) + 1;
-                }
-                setCookie("itemCount", count, 7);
-                document.getElementById("item").innerHTML = count;
-            }
-
-            // on page load, set the item count from the cookie
-            var count = getCookie("itemCount");
-            if (!count) {
-                count = 0;
-            }
-            document.getElementById("item-count").innerHTML = count;
-    </script>
-    </body>
-</html>
+        </script>
