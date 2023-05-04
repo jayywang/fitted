@@ -9,6 +9,7 @@
         <link href="seasonpage.css" rel="stylesheet" type="text/css">
         <script src="jquery-3.6.3.min.js"></script>
     </head>
+    <body>
     <div class="header">
         <a href="spring.html" class="nav">Spring</a>
             <a href="summer.html" class="nav">Summer</a>
@@ -35,42 +36,160 @@
         
     </div>
     <br><br><br><br>
-    <div id="outfits">
-        <div id="outfit">
+    <div class="outfits">
+        <div class="outfit">
             <a href="spring/springoutfit1.html"><img src="images/fitsummer2.png" class="opic"></a>
             <br>
             <a href="spring/springoutfit1.html"><span style="font-size:40pt">Garden Green</span></a>
             <br><br>
             <span style="font-size:10pt">An outfit centered around the t-shirt with the quote "F*ck Off. I'm Gardening". This fit features different shades of green with many accessories like a hat and sunglasses to tie the entire look together.</span>
+            <br><div class="like" id="like2">like</div>
         </div>
-        <div id="outfit">
+        <div class="outfit">
             <a href="spring/springoutfit2.html"><img src="images/fitsummer3.png" class="opic"></a>
             <a href="spring/springoutfit2.html"><span style="font-size:40pt">Black Gray</span></a>
             <br><br>
             <span style="font-size:10pt">A simple outfit made up of just three colors: black, gray, and white. This color combination combined with the cozy warm fit is perfect for a gloomy spring day.</span>
+            <br><div class="like" id="like4">like</div>
         </div>
     </div>
         <br><br>
     <div id="outfits">
-        <div id="outfit">
+        <div class="outfit">
             <a href="spring/springoutfit3.html"><img src="images/fitsummer1.png" class="opic"></a>
             <br>
             <a href="spring/springoutfit3.html"><span style="font-size:40pt">Casual Tans</span></a>
             <br><br>
             <span style="font-size:10pt">Casual Tans is a relaxed yet stylish outfit that combines a beige short-sleeved button-up shirt with brown trouser-style pants. This versatile ensemble is perfect for a casual day out.</span>
+            <br><div class="like" id="like3">like</div>
         </div>
-        <div id="outfit">
+        <div class="outfit">
             <a href="spring/springoutfit4.html"><img src="images/summer4.png" class="opic"></a>
             <a href="spring/springoutfit4.html"><span style="font-size:40pt">Coffee Shop</span></a>
             <br><br>
             <span style="font-size:10pt">Coffee Shop is a trendy outfit that features a white waffle long-sleeved shirt and brown Dickies pants paired with an Oakland Athletics 1995 Road Hat in dark green and gold. This ensemble is perfect for a casual coffee date or hanging out with friends.</span>
+            <br><div class="like" id="like4">like</div>
         </div>
 
 </div>
 </div>
     </div>
 
-    <body>
+     <script>
+        $(document).ready(function() {
+            // Hide the div initially
+            $("#like1").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#o1").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#like1").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#like1").hide();
+            });
+            });
+
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#like2").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#o2").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#like2").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#like2").hide();
+            });
+            });
+
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#like3").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#o3").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#like3").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#like3").hide();
+            });
+            });
+
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#like4").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#o4").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#like4").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#like4").hide();
+            });
+            });
+
+
+            $(document).ready(function() {
+            const outfit = $('#o1');
+            const like = $('#like1');
+
+            const isPink = localStorage.getItem('isPink1');
+            if (isPink1 === 'true') {
+            outfit.css('background-color', '#ffe6ff');
+            }
+
+            like.click(function() {
+            outfit.css('background-color', '#ffe6ff');
+            localStorage.setItem('isPink1', 'true');
+            });
+            });
+            
+            $(document).ready(function() {
+            const outfit2 = $('#o2');
+            const like2 = $('#like2');
+
+            const isPink2 = localStorage.getItem('isPink2');
+            if (isPink2 === 'true') {
+            outfit2.css('background-color', '#ffe6ff');
+            }
+
+            like2.click(function() {
+            outfit2.css('background-color', '#ffe6ff');
+            localStorage.setItem('isPink2', 'true');
+            });
+            });
+            
+            $(document).ready(function() {
+            const outfit3 = $('#o3');
+            const like3 = $('#like3');
+
+            const isPink3 = localStorage.getItem('isPink3');
+            if (isPink3 === 'true') {
+            outfit3.css('background-color', '#ffe6ff');
+            }
+
+            like3.click(function() {
+            outfit3.css('background-color', '#ffe6ff');
+            localStorage.setItem('isPink3', 'true');
+            });
+            });
+            
+            $(document).ready(function() {
+            const outfit4 = $('#o4');
+            const like4 = $('#like4');
+
+            const isPink = localStorage.getItem('isPink4');
+            if (isPink4 === 'true') {
+            outfit4.css('background-color', '#ffe6ff');
+            }
+
+            like4.click(function() {
+            outfit4.css('background-color', '#ffe6ff');
+            localStorage.setItem('isPink4', 'true');
+            });
+            });
+            
+    </script>
         
     </body>
 </html>
