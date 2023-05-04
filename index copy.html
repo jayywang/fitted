@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>
+        FITTED – Home
+    </title>
+    <meta charset="utf-8">
+    <meta name="description" content="HTML Basics">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="jquery-3.6.4.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="fittedhome.css">
+    <style>
+        .whosection {
+            display: none;
+        }
+
+        .howsection {
+            display: none;
+        }
+
+        .whysection {
+            display: none;
+            margin-top: -25px;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #spring {
+            margin-top: -5%;
+        }
+
+        #summer {
+            margin-top: 11%;
+            margin-left: 10%;
+
+        }
+
+        #fall {
+            margin-top: 20%;
+            margin-left: 20%;
+
+        }
+
+        #winter {
+            margin-top: 44%;
+            margin-left: 7%;
+        }
+
+        #results {
+            color: whitesmoke;
+            font-weight: 100;
+            text-align: left;
+            line-height: normal;
+            background-color: #d3d3d3;
+            padding: 15px;
+            width: 100%;
+            height: 30%;
+        }
+
+        #pics-css{
+            width: 20%;
+            margin: 10px;
+
+        }
+    </style>
+</head>
+
+
+<body>
+    <div class="header">
+        <a href="index copy.html#why" class="nav" id="whynav">Why</a>
+        <a href="index copy.html#how" class="nav" id="hownav">How</a>
+        <a href="index copy.html#who" class="nav" id="whonav">Who</a>
+
+        <div class="searchcontainer">
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search.." name="search" class="searchbar" id="search-box">
+            </form>
+        </div>
+
+        <div id="logo"><a href="https://jayywang.github.io/fitted/"
+                style="text-decoration:none; color: black;">FITTED</a></div>
+    </div>
+
+    <br><br><br>
+
+    <div class="heading">
+        <div id="headingseasons">
+            <div class="headingtext" id="spring"><a href="spring.html" style="text-decoration:none">SPRING</a></div>
+            <div class="headingtext" id="summer"><a href="summer.html" style="text-decoration:none">SUMMER</a></div>
+            <div class="headingtext" id="fall"><a href="fall.html" style="text-decoration:none">FALL</a></div>
+            <div class="headingtext" id="winter"><a href="winter.html" style="text-decoration:none">WINTER</a></div>
+        </div>
+
+
+    </div>
+
+    <br>
+    <br>
+    <br>
+
+
+
+    <!--BOTTOM SECTION-->
+    <div class="container">
+        <div id="who" class="leftblock eventblock child">
+            <div class=title>
+                <div class="inline-block">who</div>
+            </div>
+            <div class=subtitle>
+                <div class="inline-block">ARE THE</br>PUBLISHERS</div>
+            </div>
+
+        </div>
+
+
+        <div class="whosection">
+            <div class="box">
+                <img src="us_pics/jay.png" alt="jay" class="headshot">
+                <br>
+                <h3>JAY WANG</h3>
+                <p>My name is Jay Wang and I’m a Sophomore studying Business, Web Development, and Design at USC. I am a
+                    creative at heart and love the intersection of business and design.</p>
+            </div>
+
+
+            <div class="box">
+                <img src="us_pics/uyen.png" alt="uyen" class="headshot">
+                <br>
+                <h3>UYEN HOANG</h3>
+                <p>My name is Uyen Hoang and I’m a freshman studying Cognitive Science and Designing for Digital
+                    Experiences at USC. I’m currently exploring the different avenues of marketing where I can align my
+                    passions for storytelling & graphic design. </p>
+            </div>
+
+            <div class="box">
+                <img src="us_pics/eileen.png" alt="eileen" class="headshot">
+                <br>
+                <h3>EILEEN MOU</h3>
+                <p>My name is Eileen Mou and I currently study design at USC Roski and plan to minor in Designing
+                    Multimedia
+                    Experiences. I love to explore the different intersections of design through a needs-conscious lens.
+                </p>
+            </div>
+            <div class="clear"></div>
+
+        </div>
+
+        <div id="how" class="leftblock eventblock child">
+            <div class=title>
+                <div class="inline-block">how</div>
+            </div>
+            <div class=subtitle>
+                <div class="inline-block">to use</br>this website</div>
+            </div>
+        </div>
+
+
+        <div class="howsection">
+            <div class="box">
+                <div class="step">Step 1</div>
+                <br>
+                <h3>FIND YOUR LOOK</h3>
+                <p>Finding your look can be hard, but we’re here to help you through all the seasons! Select a season
+                    and browse through the different outfit options & combinations.</p>
+            </div>
+
+            <div class="box">
+                <div class="step">Step 2</div>
+                <br>
+                <h3>ITEMS ON THE SPOT</h3>
+                <p>All clothing items are linked on the given outfit’s page so you don’t have to scour the internet.
+                    Explore the different brands & prices for your desired item!</p>
+            </div>
+
+            <div class="box">
+                <div class="step">Step 3</div>
+                <br>
+                <h3>WEAR YOUR FIT OUT</h3>
+                <p>Now that you have your look, wear it out in confidence! #fittedaf</p>
+            </div>
+
+            <div class="clear"></div>
+
+        </div>
+
+        <div id="why" class="leftblock eventblock child">
+            <div class=title>
+                <div class="inline-block">why</div>
+            </div>
+            <div class=subtitle>
+                <div class="inline-block">does</br>fitted exist</div>
+            </div>
+        </div>
+
+
+        <div class="whysection">
+            <p>Our mission is to create a platform that promotes sustainable, affordable, and inclusive fashion choices
+                for
+                everyone. We strive to help our users find and purchase stylish apparel items that align with their
+                values,
+                without compromising aesthetics. Our website aims to provide an easy-to-navigate platform for finding
+                and
+                purchasing popular fashion items seen on social media. We offer a diverse selection of items from
+                different
+                price ranges, with a focus on ethically made and gender-neutral clothing options. Our goal is to promote
+                a
+                more conscious approach to fashion while ensuring that our users feel confident and stylish in their
+                choices.</p>
+        </div>
+
+        <div id="results"></div>
+    </div>
+
+    <br>
+    <br>
+
+    <!--SLICK GALLERY-->
+
+    <script>
+        $("#who").on("click", function () {
+            $(".whosection").slideToggle(1000);
+        })
+
+        $("#how").on("click", function () {
+            $(".howsection").slideToggle(1000);
+        })
+
+        $("#why").on("click", function () {
+            $(".whysection").slideToggle(1000);
+        })
+
+        $("#whynav").on("click", function () {
+            $(".whysection").slideToggle(1000);
+        })
+
+        $("#whonav").on("click", function () {
+            $(".whosection").slideToggle(1000);
+        })
+
+        $("#hownav").on("click", function () {
+            $(".howsection").slideToggle(1000);
+        })
+
+        //=================SEARCH BAR================
+
+        // outfit pic
+        var pic = [];
+        pic.push('https://jayywang.github.io/fitted/images/fitsummer2.png');
+        pic.push('https://jayywang.github.io/fitted/images/fitsummer3.png');
+        pic.push('https://jayywang.github.io/fitted/images/fitsummer1.png');
+        pic.push('https://jayywang.github.io/fitted/images/summer4.png');
+        pic.push('https://jayywang.github.io/fitted/images/summerfit1.png');
+        pic.push('https://jayywang.github.io/fitted/images/summerfit2.jpeg');
+        pic.push('https://jayywang.github.io/fitted/images/summerfit3.png');
+        pic.push('https://jayywang.github.io/fitted/images/summerfit4.png');
+        pic.push('https://jayywang.github.io/fitted/fall/img/outfit1/mainpic1.jpg');
+        pic.push('https://jayywang.github.io/fitted/fall/img/outfit2/mainpic1.png');
+        pic.push('https://jayywang.github.io/fitted/images/fallfit3.png');
+        pic.push('https://jayywang.github.io/fitted/fall/img/outfit4/mainpic1.png');
+        pic.push('https://jayywang.github.io/fitted/images/winterfita.png');
+        pic.push('https://jayywang.github.io/fitted/images/winterfitb.png');
+        pic.push('https://jayywang.github.io/fitted/winter/img/outfit4/mainpic1.png');
+        pic.push('https://jayywang.github.io/fitted/winter/img/outfit4/wamainpic1.png');
+
+        //outfit link 
+        var link = [];
+        link.push('https://jayywang.github.io/fitted/spring/springoutfit1.html');
+        link.push('https://jayywang.github.io/fitted/spring/springoutfit2.html');
+        link.push('https://jayywang.github.io/fitted/spring/springoutfit3.html');
+        link.push('https://jayywang.github.io/fitted/spring/springoutfit4.html');
+        link.push('https://jayywang.github.io/fitted/summer/summeroutfit1.html');
+        link.push('https://jayywang.github.io/fitted/summer/summeroutfit2.html');
+        link.push('https://jayywang.github.io/fitted/summer/summeroutfit3.html');
+        link.push('https://jayywang.github.io/fitted/summer/summeroutfit4.html');
+        link.push('https://jayywang.github.io/fitted/fall/falloutfit1.html');
+        link.push('https://jayywang.github.io/fitted/fall/falloutfit2.html');
+        link.push('https://jayywang.github.io/fitted/fall/falloutfit3.html');
+        link.push('https://jayywang.github.io/fitted/fall/falloutfit4.html');
+        link.push('https://jayywang.github.io/fitted/winter/winteroutfit1.html');
+        link.push('https://jayywang.github.io/fitted/winter/winteroutfit2.html');
+        link.push('https://jayywang.github.io/fitted/winter/winteroutfit3.html');
+        link.push('https://jayywang.github.io/fitted/winter/winteroutfit4.html');
+
+        //outfit name
+        var outfit = [];
+        outfit.push('Garden Green');
+        outfit.push('Black Gray');
+        outfit.push('Casual Tans');
+        outfit.push('Coffee Shop');
+        outfit.push('Feeling Gray');
+        outfit.push('Outfit 2');
+        outfit.push('Outfit 3');
+        outfit.push('Outfit 4');
+        outfit.push('Lil Denim');
+        outfit.push('Beige Day');
+        outfit.push('Browning Browns');
+        outfit.push('Black on Black');
+        outfit.push('Corduroy Brown');
+        outfit.push('Dark Chocolate');
+        outfit.push('Comfortable Leather');
+        outfit.push('Layered Green');
+
+        //outfit key words (season, genre, color)
+        var key = [];
+        key.push('Spring, Short sleeve, T-shirt, Long pants, Hat, Bag, Sneakers, Sweatshirt, Beige, Green');
+        key.push('Spring, Long sleeve, Long pants, Sneakers, Black, Gray');
+        key.push('Spring, Short sleeve, Button-up, Long pants, Sneakers, Beige, Brown');
+        key.push('Spring, Long sleeve, Long pants, Sneakers, White, Brown');
+        key.push('Summer, Tank top, Long pants, Bag, Boots, Black, Gray');
+        key.push('Summer, Short sleeve, Long pants, Hat, Sneakers, Black, Tan');
+        key.push('Summer, Short sleeve, Button-up, Long pants, Loafers, Black, Tan');
+        key.push('Summer, Short sleeve, T-shirt, Button-up, Bag, Short pants, Sneakers, White, Cream');
+        key.push('Fall, Long sleeve, Button up, Skirt, Bag, Boots, Denim, Black, Blue, Brown');
+        key.push('Fall, Long sleeve, Jacket, Coat, Sweater, Skirt, Bag, Sneakers, Beige, Cream, Green');
+        key.push('Fall, Long sleeve, Jacket, Coat, Turtle neck, Blazer, Long Pants, Boots, Black, Brown, White');
+        key.push('Fall, Long sleeve, T-shirt, Jacket, Long pants, Bag, Denim, Boots, Black, Gray');
+        key.push('Winter, Long sleeve, Jacket, Turtleneck, Button-up, Long pants, Boots, Brown, Cream, Black');
+        key.push('Winter, Long sleeve, Turtleneck, Long pants, Belt, Boots, Brown, Black');
+        key.push('Winter, Long sleeve, Button-up, Jacket, Leather, Long pants, Boots, Black, White');
+        key.push('Winter, Long sleeve, Sweater, Button-up, Jacket, Long pants, Belt, Boots, Black, Green, Brown, Cream, White');
+
+
+
+        //direct to search area after 'enter'
+        var searchBox = document.getElementById("search-box");
+        searchBox.addEventListener("keypress", function (event) {
+            if (event.keyCode === 13) {
+                window.location.href = "index copy.html#results";
+            }
+
+        });
+
+        function search() {
+            var entry = "";
+            var query = $("#search-box").val();
+            console.log(query)
+
+            for (var i = 0; i < link.length; i++) {
+                var pic2 = pic[i].toLowerCase();
+                var link2 = link[i].toLowerCase();
+                var outfit2 = outfit[i].toLowerCase()
+                var key2 = key[i].toLowerCase()
+
+                if (link2.indexOf(query) != -1 || web2.indexOf(query) != -1 || url2.indexOf(query) != -1 || category2.indexOf(query) != -1 || key2.indexOf(query) != -1) {
+                    entry += "<a href=" + " " + link[i] + " " + ">" + "<div id='pic-css'>" + pic[i] + "</div>" + outfit[i] +"</a>," + "<br>" + key[i] + "," + "<br>";
+                }
+            }
+
+            $("#results").html(entry);
+        }
+    </script>
+
+</body>
+
+</html>
