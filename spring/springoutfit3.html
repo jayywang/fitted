@@ -87,13 +87,14 @@
                 <a href="../summer.html" class="nav">Summer</a>
                 <a href="../fall.html" class="nav">Fall</a>
                 <a href="../winter.html" class="nav">Winter</a>
-    
+
             <div class="searchcontainer">
                 <form action="/action_page.php">
                     <input type="text" placeholder="Search.." name="search" class="searchbar">
-    
                 </form>
             </div>
+
+            <div id="logo"><a href="https://jayywang.github.io/fitted/" style="text-decoration:none; color: black;">FITTED</a></div>
         </div>
 
 
@@ -119,28 +120,36 @@
                 <h1>Casual Tans</h1>
                 <p>Casual Tans is a relaxed yet stylish outfit that combines a beige short-sleeved button-up shirt with brown trouser-style pants. This versatile ensemble is perfect for a casual day out.</p>
                 <br>
-                    <img style="width: 300px; height: 400px;" src="img/outfit3/shirt.png">
-                <div class="buttons" id="button4">
+                    <div class="pics" id="pic1">
+                        <img style="width: 300px; height: 400px;" src="img/outfit3/shirt.png">
+                        <div class="buttons" id="button1">
                             <div class="cart" onclick="addItem()">add to cart</div>
                             <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
-                    <img style="width: 225px; height: 450px;" src="img/outfit3/tanktop.png">
-                <div class="buttons" id="button4">
+                    </div>
+                     <div class="pics" id="pic2">
+                        <img style="width: 225px; height: 450px;" src="img/outfit3/tanktop.png">
+                        <div class="buttons" id="button2">
                             <div class="cart" onclick="addItem()">add to cart</div>
                             <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
+                    </div>
                     <br>
-                    <img style="width: 250px; height: 450px;" src="img/outfit3/pants.png">
-                <div class="buttons" id="button4">
+                     <div class="pics" id="pic3">
+                        <img style="width: 250px; height: 450px;" src="img/outfit3/pants.png">
+                        <div class="buttons" id="button3">
                             <div class="cart" onclick="addItem()">add to cart</div>
                             <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
+                    </div>
                     <br><br>
-                    <img style="width: 300px; height: 175px;" src="img/outfit3/shoes.png">
-                <div class="buttons" id="button4">
+                     <div class="pics" id="pic4">
+                        <img style="width: 300px; height: 175px;" src="img/outfit3/shoes.png">
+                        <div class="buttons" id="button4">
                             <div class="cart" onclick="addItem()">add to cart</div>
                             <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
+                    </div>
                     <br><br>
             </div>
         </div>
@@ -202,19 +211,6 @@
             }, function() {
             // When the mouse leaves, hide the "show-me" div
             $("#button4").hide();
-            });
-            });
-            
-             $(document).ready(function() {
-            // Hide the div initially
-            $("#button5").hide();
-            // Detect when the mouse enters or leaves the "hover-me" div
-             $("#pic5").hover(function() {
-            // When the mouse enters, show the "show-me" div
-            $("#button5").show();
-            }, function() {
-            // When the mouse leaves, hide the "show-me" div
-            $("#button5").hide();
             });
             });
         </script>
