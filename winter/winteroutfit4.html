@@ -161,6 +161,7 @@
         <div id="hiddenDiv">
             <p class="close" style="text-align: right;">X</p>
             <h2>You have <span id="item">1</span> item in your shopping cart!</h2>
+            <div id="subtotal"></div>
             <br><br>
         </div>
 
@@ -229,6 +230,19 @@
             $("#button5").hide();
             });
             });
+            
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#button6").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic6").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button6").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button6").hide();
+            });
+            });
         </script>
         
         <script>
@@ -244,42 +258,18 @@
         </script>
         
         <script>
-        // function to read the value of a cookie
-            function getCookie(name) {
-                var value = "; " + document.cookie;
-                var parts = value.split("; " + name + "=");
-                if (parts.length == 2) return parts.pop().split(";").shift();
-            }
+            let total = 0;
+            let clicks = 0;
 
-            // function to set the value of a cookie
-            function setCookie(name, value, days) {
-                var expires = "";
-                if (days) {
-                    var date = new Date();
-                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                    expires = "; expires=" + date.toUTCString();
-                }
-                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            function addItem(price) {
+            clicks++;
+            total += price;
+            document.getElementById("subtotal").innerHTML = "Subtotal: $" + total;
+            document.getElementById("item").innerHTML = clicks;
+            sessionStorage.setItem('total', total);
+            sessionStorage.setItem('clicks', clicks);
             }
-
-            // function to add an item to the cart
-            function addItem() {
-                var count = getCookie("itemCount");
-                if (!count) {
-                    count = 1;
-                } else {
-                    count = parseInt(count) + 1;
-                }
-                setCookie("itemCount", count, 7);
-                document.getElementById("item").innerHTML = count;
-            }
-
-            // on page load, set the item count from the cookie
-            var count = getCookie("itemCount");
-            if (!count) {
-                count = 0;
-            }
-            document.getElementById("item-count").innerHTML = count;
-    </script>
+        </script>
     </body>
 </html>
+
