@@ -5,14 +5,18 @@ body {
 h1, h2, h3, h4, p, li, ol ul {
     font-family: Arial, Helvetica, sans-serif;
 }
-/*BUTTONSCSS*/
 
-a:hover{
-    color: brown;
-}
- .pics{
-            width: 300px;
+
+/*BUTTON CSS*/
+
+        .pics{
+            width: 400px;
+            align-items: center;
+
+            display: flex;
+            flex-direction: column;
         }
+
         .buttons{
             margin: 20px;
             width: 100%;
@@ -56,8 +60,6 @@ a:hover{
             float: left;
 
         }
-
-
 
 
 
@@ -106,6 +108,7 @@ a:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
 
     background-color: #F5EBE0;
     z-index: 10;
@@ -146,3 +149,39 @@ a:hover{
     padding-bottom: 5px;
     position: absolute;
 }    
+
+
+/* HOVER BUTTONS */
+.buttons {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+
+
+    width: 250px;
+}
+
+.buttons div {
+    padding: 5px;
+}
+
+.link a{
+    color: black;
+    text-decoration: none;
+}
+
+#hiddenDiv {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    padding: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+}
+
+
+
