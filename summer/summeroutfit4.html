@@ -10,6 +10,7 @@
 
         <link rel="stylesheet" href="outfit.css">
         <link rel="stylesheet" href="nav.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
     <style>
         #outfitphotos {
@@ -113,13 +114,36 @@
                 <h1>Coffee Shop</h1>
                 <p>Coffee Shop is a trendy outfit that features a white waffle long-sleeved shirt and brown Dickies pants paired with an Oakland Athletics 1995 Road Hat in dark green and gold. This ensemble is perfect for a casual coffee date or hanging out with friends.</p>
                 <br>
-                    
+                    <div class="pics" id="pic1">
                     <img style="width: 325px; height: 275px;" src="img/outfit4/hat.png">
+                       <div class="buttons" id="button1">
+                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="link"><a href="https://www.abercrombie.com/shop/us/p/relaxed-corduroy-shirt-jacket-49185320?seq=02&source=googleshopping" target="_blank">link</a></div>
+                        </div>
+                    </div>
+                    <div class="pics" id="pic2">
                     <img style="width: 400px; height: 300px;" src="img/outfit4/shirt.png">
+                     <div class="buttons" id="button2">
+                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="link"><a href="https://www2.hm.com/en_us/productpage.1127523004.html?gclid=CjwKCAjw9J2iBhBPEiwAErwpeac6he_iWQ-1tQoHVmRNUtgYU11EhGYMEfwVVvSWNhpN9JaRkDwDDRoCyhkQAvD_BwE" target="_blank">link</a></div>
+                        </div>
+                    </div>
                     <br><br>
+                    <div class="pics" id="pic3">
                     <img style="width: 400px; height: 450px;" src="img/outfit4/pants.png">
+                    <div class="buttons" id="button3">
+                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="link"><a href="https://www2.hm.com/en_us/productpage.1089881002.html?gclid=CjwKCAjw9J2iBhBPEiwAErwpec3SIcDZMa1hSgILwgbWriXZxurcT56eTjtrPtR5tyicDvhgbOQUmxoCagoQAvD_BwE" target="_blank">link</a></div>
+                        </div>
+                    </div>
                     <br>
+                    <div class="pics" id="pic4">
                     <img style="width: 300px; height: 175px;" src="img/outfit4/shoes.png">
+                    <div class="buttons" id="button4">
+                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="link"><a href="https://www.asos.com/us/bershka/bershka-loose-fit-smart-pants-in-black/prd/202708818?affid=25902&_cclid=Google_CjwKCAjw9J2iBhBPEiwAErwpeavbinPx9WvxVFTEvOZqfqVitt-t99GW_FGxcLPlnSZO_AMwDftO2BoCED8QAvD_BwE&channelref=product+search&mk=abc&ppcadref=11302983040%7c111197600375%7cpla-294682000766&cpn=11302983040&gclid=CjwKCAjw9J2iBhBPEiwAErwpeavbinPx9WvxVFTEvOZqfqVitt-t99GW_FGxcLPlnSZO_AMwDftO2BoCED8QAvD_BwE&gclsrc=aw.ds" target="_blank">link</a></div>
+                        </div>
+                    </div>
                     <br><br>
             </div>
         </div>
@@ -128,5 +152,59 @@
         <div id="footer">
             <p>Footer Content</p>
         </div>
+        
+        <script>
+           $(document).ready(function() {
+            // Hide the div initially
+            $("#button1").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic1").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button1").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button1").hide();
+            });
+            });
+
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#button2").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic2").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button2").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button2").hide();
+            });
+            });
+
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#button3").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic3").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button3").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button3").hide();
+            });
+            });
+
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#button4").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic4").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button4").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button4").hide();
+            });
+            });
+        </script>
     </body>
 </html>
