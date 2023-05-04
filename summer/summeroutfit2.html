@@ -11,6 +11,7 @@
         <link rel="stylesheet" href="outfit.css">
         <link rel="stylesheet" href="nav.css">
         <link rel="stylesheet" href="responsive.css">
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.3.min.js"></script>
 
     <style>
         #outfitphotos {
@@ -115,12 +116,29 @@
                 <h1>Beige Day</h1>
                 <p>A cozy outfit for the cooler fall months, featuring an olive green coat and beige supporting pieces under. The outfit is pulled together with a slick handbag.</p>
                 <br>
-                    
+                    <div class="pics" id="pic1">
                     <img style="width: 350px; height: 600px;" src="img/outfit2/coat.png">
+                    <div class="buttons" id="button1">
+                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="link"><a href="https://www.abercrombie.com/shop/us/p/relaxed-corduroy-shirt-jacket-49185320?seq=02&source=googleshopping" target="_blank">link</a></div>
+                        </div>
+                    </div>
                     <br><br>
+                    <div class="pics" id="pic2">
                     <img style="width: 350px; height: 400px;" src="img/outfit2/sweater.png">
+                    <div class="buttons" id="button2">
+                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="link"><a href="https://www2.hm.com/en_us/productpage.1127523004.html?gclid=CjwKCAjw9J2iBhBPEiwAErwpeac6he_iWQ-1tQoHVmRNUtgYU11EhGYMEfwVVvSWNhpN9JaRkDwDDRoCyhkQAvD_BwE" target="_blank">link</a></div>
+                    </div>
+                    </div>
                     <br><br>
+                    <div class="pics" id="pic3">
                     <img style="width: 300px; height: 175px;" src="img/outfit2/shoes.png">
+                     <div class="buttons" id="button3">
+                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="link"><a href="https://www2.hm.com/en_us/productpage.1089881002.html?gclid=CjwKCAjw9J2iBhBPEiwAErwpec3SIcDZMa1hSgILwgbWriXZxurcT56eTjtrPtR5tyicDvhgbOQUmxoCagoQAvD_BwE" target="_blank">link</a></div>
+                      </div>
+                    </div>
                     <br><br>
             </div>
         </div>
@@ -129,5 +147,46 @@
         <div id="footer">
             <p>Footer Content</p>
         </div>
+        
+        <script>
+           $(document).ready(function() {
+            // Hide the div initially
+            $("#button1").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic1").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button1").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button1").hide();
+            });
+            });
+
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#button2").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic2").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button2").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button2").hide();
+            });
+            });
+
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#button3").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic3").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button3").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button3").hide();
+            });
+            });
+        </script>
     </body>
 </html>
