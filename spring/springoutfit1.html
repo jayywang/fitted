@@ -115,37 +115,52 @@
                 <p>An outfit centered around the t-shirt with the quote "F*ck Off. I'm Gardening". This fit features different shades of green with many accessories like a hat and sunglasses to tie the entire look together.</p>
                 <br>
                     
-                    <img style="width: 325px; height: 275px;" src="img/outfit1/hat.png">
-                <div class="buttons" id="button3">
+                    <div class="pics" id="pic1">
+                        <img style="width: 325px; height: 275px;" src="img/outfit1/hat.png">
+                        <div class="buttons" id="button1">
                             <div class="cart" onclick="addItem()">add to cart</div>
                             <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
-                    <img style="width: 325px; height: 275px;" src="img/outfit1/sunglasses.png">
-                <div class="buttons" id="button3">
+                    </div>
+                     <div class="pics" id="pic2">
+                        <img style="width: 325px; height: 275px;" src="img/outfit1/sunglasses.png">
+                        <div class="buttons" id="button2">
                             <div class="cart" onclick="addItem()">add to cart</div>
                             <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
-                    <img style="width: 400px; height: 300px;" src="img/outfit1/tshirt.png">
-                <div class="buttons" id="button3">
+                    </div>
+                    <br>
+                     <div class="pics" id="pic3">
+                        <img style="width: 400px; height: 300px;" src="img/outfit1/tshirt.png">
+                        <div class="buttons" id="button3">
                             <div class="cart" onclick="addItem()">add to cart</div>
                             <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
+                    </div>
                     <br><br>
-                    <img style="width: 400px; height: 500px;" src="img/outfit1/sweater.png">
-                <div class="buttons" id="button3">
+                     <div class="pics" id="pic4">
+                        <img style="width: 400px; height: 500px;" src="img/outfit1/sweater.png">
+                        <div class="buttons" id="button4">
                             <div class="cart" onclick="addItem()">add to cart</div>
                             <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
-                    <img style="width: 400px; height: 750px;" src="img/outfit1/pants.png">
-                <div class="buttons" id="button3">
+                    </div>
+                    <br><br>
+                     <div class="pics" id="pic5">
+                        <img style="width: 400px; height: 750px;" src="img/outfit1/pants.png">
+                        <div class="buttons" id="button5">
                             <div class="cart" onclick="addItem()">add to cart</div>
                             <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
-                    <img style="width: 400px; height: 225px;" src="img/outfit1/shoe.png">
-                <div class="buttons" id="button3">
+                    </div>
+                    <br><br>
+                    <div class="pics" id="pic6">
+                        <img style="width: 400px; height: 225px;" src="img/outfit1/shoe.png">
+                        <div class="buttons" id="button6">
                             <div class="cart" onclick="addItem()">add to cart</div>
                             <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
+                    </div>
                     <br><br>
             </div>
         </div>
@@ -220,6 +235,19 @@
             }, function() {
             // When the mouse leaves, hide the "show-me" div
             $("#button5").hide();
+            });
+            });
+            
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#button6").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic6").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button6").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button6").hide();
             });
             });
         </script>
