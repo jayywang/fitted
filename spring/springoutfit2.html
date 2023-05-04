@@ -124,14 +124,14 @@
                     <div class="pics" id="pic1">
                         <img style="width: 350px; height: 350px;" src="img/outfit2/sweater.png">
                         <div class="buttons" id="button1">
-                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="cart" onclick="addItem(69.00)">add to cart</div>
                             <div class="link"><a href="https://bonobos.com/products/cotton-cashmere-half-zip-swter00438?color=silver%20grey&shirt-size=l&utm_medium=ppc&utm_source=google&utm_campaign=00_G-Shopping_US_NB_%7C_Outerwear_%7C_DSK_TB&utm_content=11375102853_116738849892&gclid=Cj0KCQjwla-hBhD7ARIsAM9tQKv03q7EIQILkoN4R_8peI8JFI67c4U9uG1IABfYc73q1ubEn_eHzaUaAgBAEALw_wcB&gclsrc=aw.ds" target="_blank">link</a></div>
                         </div>
                     </div>
                      <div class="pics" id="pic2">
                         <img style="width: 350px; height: 350px;" src="img/outfit2/tshirt.png">
                         <div class="buttons" id="button2">
-                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="cart" onclick="addItem(58.00)">add to cart</div>
                             <div class="link"><a href="https://shop.lululemon.com/p/men-ss-tops/The-Fundamental-T/_/prod9960862?color=0002&sz=L&locale=en_US&sl=US&CID=Google_PMAX_US_NAT_EN_M_Hybrid_Men_GEN_Y22_ag=&gclid=Cj0KCQjwla-hBhD7ARIsAM9tQKunvF4-Ob_pSo28Ux9K76eRBeeJbK-lKqbVGR_xRmgIDKj4TLNUKp0aApBlEALw_wcB&gclsrc=aw.ds" target="_blank">link</a></div>
                         </div>
                     </div>
@@ -139,7 +139,7 @@
                      <div class="pics" id="pic3">
                         <img style="width: 300px; height: 500px;" src="img/outfit2/pants.png">
                         <div class="buttons" id="button3">
-                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="cart" onclick="addItem(229.00)">add to cart</div>
                             <div class="link"><a href="https://bonobos.com/products/stretch-wool-dress-pants?color=black&pant-fit=slim%20taper" target="_blank">link</a></div>
                         </div>
                     </div>
@@ -147,7 +147,7 @@
                      <div class="pics" id="pic4">
                         <img style="width: 300px; height: 200px;" src="img/outfit2/shoe.png">
                         <div class="buttons" id="button4">
-                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="cart" onclick="addItem(145.00)">add to cart</div>
                             <div class="link"><a href="https://www.ralphlauren.com/men-footwear-shoes/jermain-leather-sneaker/0042782862.html?utm_source=CSE&utm_medium=GooglePLA_1486119327354_9570772472_102564264430&gclid=Cj0KCQjwla-hBhD7ARIsAM9tQKs8wZfk0Za0oxjSEkUW4jlkMytorfjPXNh_Qvp1ScvfGkq-fJ1INWUaArgXEALw_wcB&gclsrc=aw.ds" target="_blank">link</a></div>
                         </div>
                     </div>
@@ -159,6 +159,7 @@
         <div id="hiddenDiv">
             <p class="close" style="text-align: right;">X</p>
             <h2>You have <span id="item">1</span> item in your shopping cart!</h2>
+            <div id="subtotal"></div>
             <br><br>
         </div>
 
@@ -214,6 +215,7 @@
             $("#button4").hide();
             });
             });
+            
         </script>
         
         <script>
@@ -229,42 +231,18 @@
         </script>
         
         <script>
-        // function to read the value of a cookie
-            function getCookie(name) {
-                var value = "; " + document.cookie;
-                var parts = value.split("; " + name + "=");
-                if (parts.length == 2) return parts.pop().split(";").shift();
-            }
+            let total = 0;
+            let clicks = 0;
 
-            // function to set the value of a cookie
-            function setCookie(name, value, days) {
-                var expires = "";
-                if (days) {
-                    var date = new Date();
-                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                    expires = "; expires=" + date.toUTCString();
-                }
-                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            function addItem(price) {
+            clicks++;
+            total += price;
+            document.getElementById("subtotal").innerHTML = "Subtotal: $" + total;
+            document.getElementById("item").innerHTML = clicks;
+            sessionStorage.setItem('total', total);
+            sessionStorage.setItem('clicks', clicks);
             }
-
-            // function to add an item to the cart
-            function addItem() {
-                var count = getCookie("itemCount");
-                if (!count) {
-                    count = 1;
-                } else {
-                    count = parseInt(count) + 1;
-                }
-                setCookie("itemCount", count, 7);
-                document.getElementById("item").innerHTML = count;
-            }
-
-            // on page load, set the item count from the cookie
-            var count = getCookie("itemCount");
-            if (!count) {
-                count = 0;
-            }
-            document.getElementById("item-count").innerHTML = count;
-    </script>
+        </script>
     </body>
 </html>
+
