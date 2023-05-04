@@ -15,6 +15,20 @@
     font-family: 'Helvetica Neue';
 }
 
+#logo {
+    width: 100%;
+    font-family: 'Helvetica Neue';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 65px;
+    line-height: 91px;
+    letter-spacing: 0.05em;
+    color: #000000;
+    text-align: center;
+    margin-left: 200px;
+
+}
+
 .nav:hover {
     color: #8a837c;
 }
