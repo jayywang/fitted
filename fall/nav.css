@@ -14,7 +14,7 @@
     letter-spacing: 0.05em;
     color: #000000;
     text-align: center;
-    margin-left: 200px;
+    margin-left: 350px;
 
 }
 
@@ -78,27 +78,19 @@
     }
     
     #logo{
-        font-size: 50px;
+        font-size: 30px;
+        margin-left: 300px;
     }  
 }
 
-@media screen and (max-width: 640px) {
-    .nav{
-        font-size: 17px;
-    }
-    
-     #logo{
-        font-size: 30px;
-    }
-    
-     .searchcontainer {
+@media screen and (max-width: 800px) {
+    .searchcontainer {
         border: black;
         position: absolute;
         width: max-content;
         margin-top: 13px;
         padding: 10px;
         margin-left: 50px;
-    
     }
     
     .searchbar {
@@ -112,4 +104,69 @@
         background-size: 15px;
         width: 30px;
     }
+    
+    #logo{
+        font-size: 30px;
+        margin-left: 200px;
+    }  
 }
+
+
+@media screen and (max-width: 640px) {
+            #header {
+                width: 100%;
+            }
+            #header p {
+                padding-right: 10px;
+            }
+            .searchbar {
+                width: 100%;
+            }
+            #content {
+                flex-direction: column;
+            }
+            #leftside {
+                width: 100%;
+                margin-left: 0;
+                margin-right: 0;
+            }
+            #rightside img {
+                width: 100%;
+                height: auto;
+            }
+            #rightside p {
+                width: 90%;
+            }
+
+            .header {
+            width: 100%;
+            padding-top: 50px;
+            }
+
+            .nav {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                text-align: center;
+                margin: 0;
+                width: 50%;
+            }
+
+            .searchcontainer {
+                position: relative;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding-top: 25px;
+                margin-left: 165px;
+            }
+
+            .searchbar {
+                width: 100%;
+            }
+
+            #logo {
+                font-size: 50px;
+                margin: 0px;
+            }
+        }
