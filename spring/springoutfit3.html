@@ -123,14 +123,14 @@
                     <div class="pics" id="pic1">
                         <img style="width: 300px; height: 400px;" src="img/outfit3/shirt.png">
                         <div class="buttons" id="button1">
-                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="cart" onclick="addItem(49.00)">add to cart</div>
                             <div class="link"><a href="https://www.urbanoutfitters.com/shop/standard-cloth-liam-crinkle-shirt?inventoryCountry=US&color=014&size=L&utm_medium=cpc&utm_source=google&utm_campaign=%5BNB%20PLA%20US%5D%20-%20Smart%20Shopping%20-%20Mens%20-%20Tops&utm_content=Tops&utm_term=PRODUCT_GROUP&creative=538082328381&device=c&matchtype=&network=u&utm_kxconfid=vx6q4l3b6&gclid=Cj0KCQjwla-hBhD7ARIsAM9tQKvyauEI3TniOxSZ5fQmHmOqQpfLG-GmutQfs36_52hcNOB-_6C0Xo0aAuHDEALw_wcB&gclsrc=aw.ds&type=REGULAR&quantity=1" target="_blank">link</a></div>
                         </div>
                     </div>
                      <div class="pics" id="pic2">
                         <img style="width: 225px; height: 450px;" src="img/outfit3/tanktop.png">
                         <div class="buttons" id="button2">
-                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="cart" onclick="addItem(19.00)">add to cart</div>
                             <div class="link"><a href="https://www.urbanoutfitters.com/shop/uo-classic-ribbed-tank-top?inventoryCountry=US&color=010&size=L&utm_medium=cpc&utm_source=google&utm_campaign=%5BNB%20PLA%20US%5D%20-%20Smart%20Shopping%20-%20Mens%20-%20Tops&utm_content=Tops&utm_term=PRODUCT_GROUP&creative=538082328381&device=c&matchtype=&network=u&utm_kxconfid=vx6q4l3b6&gclid=Cj0KCQjwla-hBhD7ARIsAM9tQKuud9eRqsWwyjDTz-aL0sH8LUDKpDALb71K80Ufi75OitNnkj4LKBgaAj7uEALw_wcB&gclsrc=aw.ds&type=REGULAR&quantity=1" target="_blank">link</a></div>
                         </div>
                     </div>
@@ -138,7 +138,7 @@
                      <div class="pics" id="pic3">
                         <img style="width: 250px; height: 450px;" src="img/outfit3/pants.png">
                         <div class="buttons" id="button3">
-                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="cart" onclick="addItem(59.99)">add to cart</div>
                             <div class="link"><a href="https://francesjaye.com/products/seth-pants?variant=40300903333993&utm_source=pinterest&utm_medium=social" target="_blank">link</a></div>
                         </div>
                     </div>
@@ -146,7 +146,7 @@
                      <div class="pics" id="pic4">
                         <img style="width: 300px; height: 175px;" src="img/outfit3/shoes.png">
                         <div class="buttons" id="button4">
-                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="cart" onclick="addItem(140.00)">add to cart</div>
                             <div class="link"><a href="https://www.drmartens.com/us/en/1461-mono-smooth-leather-oxford-shoes/p/14345001?utm_source=google&utm_medium=cpc&utm_campaign=3Q_PMax_US_Performance_Shopping_Brand&gclid=Cj0KCQjwla-hBhD7ARIsAM9tQKu3flH4VgCgafFqA-5R5W2XnVTX48g1E9mdYvNc-q1sq5k6DUX7CPcaAov6EALw_wcB" target="_blank">link</a></div>
                         </div>
                     </div>
@@ -158,6 +158,7 @@
         <div id="hiddenDiv">
             <p class="close" style="text-align: right;">X</p>
             <h2>You have <span id="item">1</span> item in your shopping cart!</h2>
+            <div id="subtotal"></div>
             <br><br>
         </div>
 
@@ -228,42 +229,17 @@
         </script>
         
         <script>
-        // function to read the value of a cookie
-            function getCookie(name) {
-                var value = "; " + document.cookie;
-                var parts = value.split("; " + name + "=");
-                if (parts.length == 2) return parts.pop().split(";").shift();
-            }
+            let total = 0;
+            let clicks = 0;
 
-            // function to set the value of a cookie
-            function setCookie(name, value, days) {
-                var expires = "";
-                if (days) {
-                    var date = new Date();
-                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                    expires = "; expires=" + date.toUTCString();
-                }
-                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            function addItem(price) {
+            clicks++;
+            total += price;
+            document.getElementById("subtotal").innerHTML = "Subtotal: $" + total;
+            document.getElementById("item").innerHTML = clicks;
+            sessionStorage.setItem('total', total);
+            sessionStorage.setItem('clicks', clicks);
             }
-
-            // function to add an item to the cart
-            function addItem() {
-                var count = getCookie("itemCount");
-                if (!count) {
-                    count = 1;
-                } else {
-                    count = parseInt(count) + 1;
-                }
-                setCookie("itemCount", count, 7);
-                document.getElementById("item").innerHTML = count;
-            }
-
-            // on page load, set the item count from the cookie
-            var count = getCookie("itemCount");
-            if (!count) {
-                count = 0;
-            }
-            document.getElementById("item-count").innerHTML = count;
-    </script>
+        </script>
     </body>
 </html>
