@@ -102,7 +102,7 @@
             <div id="leftside">         
                 <div id="outfitphotos">
                     <br><br><br><br>
-                    <img style="width: 400px;" src="summer/img/outfit3/mainpic1.png">
+                    <img style="width: 400px;" src="https://www.uniqlo.com/jp/ja/contents/collaboration/uniqlo-u/23ss/common/imgs/lookbookMen/lookbook-1.webp?1673599920148">
                 </div>
 
             </div>
@@ -111,37 +111,45 @@
 
             <div id="rightside">
                 <br><br><br><br>
-                <h1>Browning Browns</h1>
-                <p>Monochromatic outfits are in style, and this fall outfit is all brown piece with different shades to complement one another.</p>
+                <h1>Dark Summer</h1>
+                <p>A summer outfit with a bucket hat to keep you warm. This outfit features darker tones of purple, blue, and green to contrast the bright colors of summer.</p>
                 <br>
                     <div class="pics" id="pic1">
-                    <img style="width: 300px; height: 400px;" src="summer/img/outfit3/shirt.png">
+                    <img style="width: 300px; height: 400px;" src="summer/img/outfit3/hat.png">
                      <div class="buttons" id="button1">
-                            <div class="cart" onclick="addItem()">add to cart</div>
-                            <div class="link"><a href="https://www.abercrombie.com/shop/us/p/relaxed-corduroy-shirt-jacket-49185320?seq=02&source=googleshopping" target="_blank">link</a></div>
+                            <div class="cart" onclick="addItem(29.90)">add to cart</div>
+                            <div class="link"><a href="https://www.uniqlo.com/us/en/products/E457690-000" target="_blank">link</a></div>
                         </div>
                     </div>
                     <div class="pics" id="pic2">
-                    <img style="width: 225px; height: 450px;" src="summer/img/outfit3/tanktop.png">
+                    <img style="width: 225px; height: 450px;" src="summer/img/outfit3/shirt.png">
                      <div class="buttons" id="button2">
-                            <div class="cart" onclick="addItem()">add to cart</div>
-                            <div class="link"><a href="https://www2.hm.com/en_us/productpage.1127523004.html?gclid=CjwKCAjw9J2iBhBPEiwAErwpeac6he_iWQ-1tQoHVmRNUtgYU11EhGYMEfwVVvSWNhpN9JaRkDwDDRoCyhkQAvD_BwE" target="_blank">link</a></div>
+                            <div class="cart" onclick="addItem(39.90)">add to cart</div>
+                            <div class="link"><a href="https://www.uniqlo.com/us/en/products/E455978-000" target="_blank">link</a></div>
                         </div>
                     </div
                     <br>
                     <div class="pics" id="pic3">
-                    <img style="width: 250px; height: 450px;" src="summer/img/outfit3/pants.png">
+                    <img style="width: 250px; height: 450px;" src="summer/img/outfit3/tshirt.png">
                      <div class="buttons" id="button3">
-                            <div class="cart" onclick="addItem()">add to cart</div>
-                            <div class="link"><a href="https://www2.hm.com/en_us/productpage.1089881002.html?gclid=CjwKCAjw9J2iBhBPEiwAErwpec3SIcDZMa1hSgILwgbWriXZxurcT56eTjtrPtR5tyicDvhgbOQUmxoCagoQAvD_BwE" target="_blank">link</a></div>
+                            <div class="cart" onclick="addItem(19.90)">add to cart</div>
+                            <div class="link"><a href="https://www.uniqlo.com/us/en/products/E455359-000" target="_blank">link</a></div>
                         </div>
                     </div>
                     <br><br>
                     <div class="pics" id="pic4">
-                    <img style="width: 300px; height: 175px;" src="summer/img/outfit3/shoes.png">
+                    <img style="width: 300px; height: 175px;" src="summer/img/outfit3/shorts.png">
                     <div class="buttons" id="button4">
-                            <div class="cart" onclick="addItem()">add to cart</div>
-                            <div class="link"><a href="https://www.asos.com/us/bershka/bershka-loose-fit-smart-pants-in-black/prd/202708818?affid=25902&_cclid=Google_CjwKCAjw9J2iBhBPEiwAErwpeavbinPx9WvxVFTEvOZqfqVitt-t99GW_FGxcLPlnSZO_AMwDftO2BoCED8QAvD_BwE&channelref=product+search&mk=abc&ppcadref=11302983040%7c111197600375%7cpla-294682000766&cpn=11302983040&gclid=CjwKCAjw9J2iBhBPEiwAErwpeavbinPx9WvxVFTEvOZqfqVitt-t99GW_FGxcLPlnSZO_AMwDftO2BoCED8QAvD_BwE&gclsrc=aw.ds" target="_blank">link</a></div>
+                            <div class="cart" onclick="addItem(49.90)">add to cart</div>
+                            <div class="link"><a href="https://www.uniqlo.com/us/en/products/E459297-000" target="_blank">link</a></div>
+                        </div>
+                    </div>
+                        <br><br>
+                    <div class="pics" id="pic5">
+                    <img style="width: 300px; height: 175px;" src="summer/img/outfit3/bag.png">
+                    <div class="buttons" id="button5">
+                            <div class="cart" onclick="addItem(39.90)">add to cart</div>
+                            <div class="link"><a href="https://www.uniqlo.com/us/en/products/E461841-000" target="_blank">link</a></div>
                         </div>
                     </div>
                         <br><br>
@@ -219,19 +227,6 @@
             }, function() {
             // When the mouse leaves, hide the "show-me" div
             $("#button5").hide();
-            });
-            });
-            
-            $(document).ready(function() {
-            // Hide the div initially
-            $("#button6").hide();
-            // Detect when the mouse enters or leaves the "hover-me" div
-             $("#pic6").hover(function() {
-            // When the mouse enters, show the "show-me" div
-            $("#button6").show();
-            }, function() {
-            // When the mouse leaves, hide the "show-me" div
-            $("#button6").hide();
             });
             });
         </script>
