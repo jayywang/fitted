@@ -195,6 +195,48 @@ h1 {
     font-size: 15px;
 }
 
+.autoplay {
+
+    display: flex;
+
+    justify-content: space-between;
+
+}
+
+
+
+
+.testpics {
+
+    width: 350px;
+
+    height: auto;
+
+    max-height: 450px;
+
+    object-fit: cover;
+
+}
+
+
+
+
+.testpics img {
+
+    width: 90%;
+
+    height: auto;
+
+    object-fit: cover;
+
+    object-position: center;
+
+    margin-left: 5%;
+
+    margin-right: 5%;
+
+}
+
 
 
 @media screen and (max-width: 1100px) {
