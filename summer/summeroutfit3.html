@@ -149,11 +149,14 @@
         </div>
 
 
-        <div id="footer">
-            <p>Footer Content</p>
+        <div id="hiddenDiv">
+            <p class="close" style="text-align: right;">X</p>
+            <h2>You have <span id="item">1</span> item in your shopping cart!</h2>
+            <div id="subtotal"></div>
+            <br><br>
         </div>
-            
-              <script>
+
+        <script>
            $(document).ready(function() {
             // Hide the div initially
             $("#button1").hide();
@@ -205,6 +208,59 @@
             $("#button4").hide();
             });
             });
-            </script>
+            
+             $(document).ready(function() {
+            // Hide the div initially
+            $("#button5").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic5").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button5").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button5").hide();
+            });
+            });
+            
+            $(document).ready(function() {
+            // Hide the div initially
+            $("#button6").hide();
+            // Detect when the mouse enters or leaves the "hover-me" div
+             $("#pic6").hover(function() {
+            // When the mouse enters, show the "show-me" div
+            $("#button6").show();
+            }, function() {
+            // When the mouse leaves, hide the "show-me" div
+            $("#button6").hide();
+            });
+            });
+        </script>
+        
+        <script>
+          $(document).ready(function() {
+            $(".cart").click(function() {
+              $("#hiddenDiv").show();
+            });
+
+            $(".close").click(function() {
+              $("#hiddenDiv").hide();
+            });
+          });
+        </script>
+        
+        <script>
+            let total = 0;
+            let clicks = 0;
+
+            function addItem(price) {
+            clicks++;
+            total += price;
+            document.getElementById("subtotal").innerHTML = "Subtotal: $" + total;
+            document.getElementById("item").innerHTML = clicks;
+            sessionStorage.setItem('total', total);
+            sessionStorage.setItem('clicks', clicks);
+            }
+        </script>
     </body>
 </html>
+
