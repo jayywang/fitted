@@ -181,7 +181,8 @@ h1 {
 
 .testpics {
     width: 350px;
-    height: 500px;
+    height: auto;
+    max-height: 450px;
     object-fit: cover;
 }
 
