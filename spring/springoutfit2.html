@@ -120,29 +120,36 @@
                 <p>A simple outfit made up of just three colors: black, gray, and white. This color combination combined with the cozy warm fit is perfect for a gloomy spring day.</p>
                 <br>
                     
-                    <img style="width: 350px; height: 350px;" src="img/outfit2/sweater.png">
-                <div class="buttons" id="button1">
+                    <div class="pics" id="pic1">
+                        <img style="width: 350px; height: 350px;" src="img/outfit2/sweater.png">
+                        <div class="buttons" id="button1">
                             <div class="cart" onclick="addItem()">add to cart</div>
                             <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
-                    <br><br>
-                    <img style="width: 350px; height: 350px;" src="img/outfit2/tshirt.png">
-                <div class="buttons" id="button1">
+                    </div>
+                     <div class="pics" id="pic2">
+                        <img style="width: 350px; height: 350px;" src="img/outfit2/tshirt.png">
+                        <div class="buttons" id="button2">
                             <div class="cart" onclick="addItem()">add to cart</div>
                             <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
-                    <br><br>
-                    <img style="width: 300px; height: 500px;" src="img/outfit2/pants.png">
-                <div class="buttons" id="button1">
-                            <div class="cart" onclick="addItem()">add to cart</div>
-                            <div class="link"><a href="" target="_blank">link</a></div>
-                        </div>
+                    </div>
                     <br>
-                    <img style="width: 300px; height: 200px;" src="img/outfit2/shoe.png">
-                <div class="buttons" id="button1">
+                     <div class="pics" id="pic3">
+                        <img style="width: 300px; height: 500px;" src="img/outfit2/pants.png">
+                        <div class="buttons" id="button3">
                             <div class="cart" onclick="addItem()">add to cart</div>
                             <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
+                    </div>
+                    <br><br>
+                     <div class="pics" id="pic4">
+                        <img style="width: 300px; height: 200px;" src="img/outfit2/shoe.png">
+                        <div class="buttons" id="button4">
+                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="link"><a href="" target="_blank">link</a></div>
+                        </div>
+                    </div>
                     <br><br>
             </div>
         </div>
@@ -204,19 +211,6 @@
             }, function() {
             // When the mouse leaves, hide the "show-me" div
             $("#button4").hide();
-            });
-            });
-            
-             $(document).ready(function() {
-            // Hide the div initially
-            $("#button5").hide();
-            // Detect when the mouse enters or leaves the "hover-me" div
-             $("#pic5").hover(function() {
-            // When the mouse enters, show the "show-me" div
-            $("#button5").show();
-            }, function() {
-            // When the mouse leaves, hide the "show-me" div
-            $("#button5").hide();
             });
             });
         </script>
