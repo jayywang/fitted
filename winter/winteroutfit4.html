@@ -118,56 +118,52 @@
                       <div class="pics" id="pic1">
                         <img style="width: 350px; height: 350px;" src="img/outfit4/w4inshirt.png">
                         <div class="buttons" id="button1">
-                        <div class="like"><a href=></a>like</div>
-                        <div class="cart"><a href=></a>add to cart</div>
-                        <div class="link"><a href=></a>link</div>
+                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
                     </div>
                       <div class="pics" id="pic2">
                         <img style="width: 350px; height: 350px;" src="img/outfit4/w4shirt.png">
                         <div class="buttons" id="button2">
-                        <div class="like"><a href=></a>like</div>
-                        <div class="cart"><a href=></a>add to cart</div>
-                        <div class="link"><a href=></a>link</div>
+                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
                     </div>
                     <br>
                       <div class="pics" id="pic3">
                         <img style="width: 350px; height: 350px;" src="img/outfit4/w4green.png">
                         <div class="buttons" id="button3">
-                        <div class="like"><a href=></a>like</div>
-                        <div class="cart"><a href=></a>add to cart</div>
-                        <div class="link"><a href=></a>link</div>
+                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
                     </div>
                     <br><br>
                       <div class="pics" id="pic4">
                         <img style="width: 350px; height: 350px;" src="img/outfit4/w4pants.png">
                         <div class="buttons" id="button4">
-                        <div class="like"><a href=></a>like</div>
-                        <div class="cart"><a href=></a>add to cart</div>
-                        <div class="link"><a href=></a>link</div>
+                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
                     </div>
                     <br><br>
                       <div class="pics" id="pic5">
                         <img style="width: 350px; height: 350px;" src="img/outfit4/blackshoes.png">
                         <div class="buttons" id="button5">
-                        <div class="like"><a href=></a>like</div>
-                        <div class="cart"><a href=></a>add to cart</div>
-                        <div class="link"><a href=></a>link</div>
+                            <div class="cart" onclick="addItem()">add to cart</div>
+                            <div class="link"><a href="" target="_blank">link</a></div>
                         </div>
                     </div>
                     <br><br>
             </div>
         </div>
 
-
-        <div id="footer">
-            <p>Footer Content</p>
+        <div id="hiddenDiv">
+            <p class="close" style="text-align: right;">X</p>
+            <h2>You have <span id="item">1</span> item in your shopping cart!</h2>
+            <br><br>
         </div>
-        
-         <script>
+
+        <script>
            $(document).ready(function() {
             // Hide the div initially
             $("#button1").hide();
@@ -219,8 +215,8 @@
             $("#button4").hide();
             });
             });
-             
-              $(document).ready(function() {
+            
+             $(document).ready(function() {
             // Hide the div initially
             $("#button5").hide();
             // Detect when the mouse enters or leaves the "hover-me" div
@@ -232,6 +228,57 @@
             $("#button5").hide();
             });
             });
-             </script
+        </script>
+        
+        <script>
+          $(document).ready(function() {
+            $(".cart").click(function() {
+              $("#hiddenDiv").show();
+            });
+
+            $(".close").click(function() {
+              $("#hiddenDiv").hide();
+            });
+          });
+        </script>
+        
+        <script>
+        // function to read the value of a cookie
+            function getCookie(name) {
+                var value = "; " + document.cookie;
+                var parts = value.split("; " + name + "=");
+                if (parts.length == 2) return parts.pop().split(";").shift();
+            }
+
+            // function to set the value of a cookie
+            function setCookie(name, value, days) {
+                var expires = "";
+                if (days) {
+                    var date = new Date();
+                    date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                    expires = "; expires=" + date.toUTCString();
+                }
+                document.cookie = name + "=" + (value || "") + expires + "; path=/";
+            }
+
+            // function to add an item to the cart
+            function addItem() {
+                var count = getCookie("itemCount");
+                if (!count) {
+                    count = 1;
+                } else {
+                    count = parseInt(count) + 1;
+                }
+                setCookie("itemCount", count, 7);
+                document.getElementById("item").innerHTML = count;
+            }
+
+            // on page load, set the item count from the cookie
+            var count = getCookie("itemCount");
+            if (!count) {
+                count = 0;
+            }
+            document.getElementById("item-count").innerHTML = count;
+    </script>
     </body>
 </html>
