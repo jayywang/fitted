@@ -40,40 +40,40 @@
         </div>
         <br><br><br><br>
         <div id="outfits">
-            <div class="outfit" id="o1" >
+            <div class="outfit" id="fo1" >
                 <a href="fall/falloutfit1.html"><img src="https://jayywang.github.io/fitted/fall/img/outfit1/mainpic1.jpg" class="opic"></a>
                 <br>
                 <a href="fall/falloutfit1.html"><span style="font-size:40pt">Lil Denim</span></a>
                 <br><br>
                 <span style="font-size:10pt">Bring that denim skirt out of the closet and pair it with a simple black button up, black leather boots, and brown leather bag for a chic fall look</span>
-                <br><div class="like" id="like1">like</div>
+                <br><div class="like" id="flike1">like</div>
             </div>
-            <div class="outfit" id="o2">
+            <div class="outfit" id="fo2">
                 <a href="fall/falloutfit2.html"><img src="https://jayywang.github.io/fitted/fall/img/outfit2/mainpic1.png" class="opic"></a><br>
                 <a href="fall/falloutfit2.html"><span style="font-size:40pt">Beige Day</span></a>
                 <br><br>
                 <span style="font-size:10pt">A cozy outfit for the cooler fall months, featuring an olive green coat and beige supporting pieces under. The outfit is pulled together with a slick handbag.</span>
-                <br><div class="like" id="like2">like</div>
+                <br><div class="like" id="flike2">like</div>
             </div>
             </div>
             <br><br>
             <div id="outfits">
-            <div class="outfit" id="o3">
+            <div class="outfit" id="fo3">
                 <a href="fall/falloutfit3.html"><img src="images/fallfit3.png" class="opic"></a>
                 <br><br>
                 <div id="text"><a href="fall/falloutfit3.html"><span style="font-size:40pt">Browning Browns</span></a>
                 <br><br>
                 <span style="font-size:10pt">Monochromatic outfits are in style, and this fall outfit is all brown piece with different shades to complement one another.</span>
-                <br><div class="like" id="like3">like</div>
+                <br><div class="like" id="flike3">like</div>
                 </div>
             </div>
-            <div class="outfit" id="o4">
-                <a href="fall/falloutfit4.html"><img src="/fall/img/outfit4/mainpic1.png" class="opic"></a><br><br>
+            <div class="outfit" id="fo4">
+                <a href="fall/falloutfit4.html"><img src="fall/img/outfit4/mainpic1.png" class="opic"></a><br><br>
                 <div id="text"><a href="fall/falloutfit4.html"><span style="font-size:40pt">Black on Black</span></a>
                 <br><br>
                 <span style="font-size:10pt">Black on Black features a thick, baggy black cardigan over a gray-ish beige tshirt with black denim jeans and black chunky boots.</span>
                 </div>
-                <br><div class="like" id="like4">like</div>
+                <br><div class="like" id="flike4">like</div>
             </div>
         </div>
     
@@ -81,114 +81,114 @@
     <script>
         $(document).ready(function() {
             // Hide the div initially
-            $("#like1").hide();
+            $("#flike1").hide();
             // Detect when the mouse enters or leaves the "hover-me" div
-             $("#o1").hover(function() {
+             $("#fo1").hover(function() {
             // When the mouse enters, show the "show-me" div
-            $("#like1").show();
+            $("#flike1").show();
             }, function() {
             // When the mouse leaves, hide the "show-me" div
-            $("#like1").hide();
+            $("#flike1").hide();
             });
             });
 
             $(document).ready(function() {
             // Hide the div initially
-            $("#like2").hide();
+            $("#flike2").hide();
             // Detect when the mouse enters or leaves the "hover-me" div
-             $("#o2").hover(function() {
+             $("#fo2").hover(function() {
             // When the mouse enters, show the "show-me" div
-            $("#like2").show();
+            $("#flike2").show();
             }, function() {
             // When the mouse leaves, hide the "show-me" div
-            $("#like2").hide();
+            $("#flike2").hide();
             });
             });
 
             $(document).ready(function() {
             // Hide the div initially
-            $("#like3").hide();
+            $("#flike3").hide();
             // Detect when the mouse enters or leaves the "hover-me" div
-             $("#o3").hover(function() {
+             $("#fo3").hover(function() {
             // When the mouse enters, show the "show-me" div
-            $("#like3").show();
+            $("#flike3").show();
             }, function() {
             // When the mouse leaves, hide the "show-me" div
-            $("#like3").hide();
+            $("#flike3").hide();
             });
             });
 
             $(document).ready(function() {
             // Hide the div initially
-            $("#like4").hide();
+            $("#flike4").hide();
             // Detect when the mouse enters or leaves the "hover-me" div
-             $("#o4").hover(function() {
+             $("#fo4").hover(function() {
             // When the mouse enters, show the "show-me" div
-            $("#like4").show();
+            $("#flike4").show();
             }, function() {
             // When the mouse leaves, hide the "show-me" div
-            $("#like4").hide();
+            $("#flike4").hide();
             });
             });
 
 
             $(document).ready(function() {
-            const outfit = $('#o1');
-            const like = $('#like1');
+            const foutfit = $('#fo1');
+            const flike = $('#flike1');
 
-            const isPink = localStorage.getItem('isPink1');
-            if (isPink1 === 'true') {
-            outfit.css('background-color', '#ffe6ff');
+            const fisPink = localStorage.getItem('fisPink1');
+            if (fisPink1 === 'true') {
+            foutfit.css('background-color', '#ffe6ff');
             }
 
-            like.click(function() {
-            outfit.css('background-color', '#ffe6ff');
-            localStorage.setItem('isPink1', 'true');
+            flike.click(function() {
+            foutfit.css('background-color', '#ffe6ff');
+            localStorage.setItem('fisPink1', 'true');
             });
             });
             
             $(document).ready(function() {
-            const outfit2 = $('#o2');
-            const like2 = $('#like2');
+            const foutfit2 = $('#fo2');
+            const flike2 = $('#flike2');
 
-            const isPink2 = localStorage.getItem('isPink2');
-            if (isPink2 === 'true') {
-            outfit2.css('background-color', '#ffe6ff');
+            const fisPink2 = localStorage.getItem('fisPink2');
+            if (fisPink2 === 'true') {
+            foutfit2.css('background-color', '#ffe6ff');
             }
 
-            like2.click(function() {
-            outfit2.css('background-color', '#ffe6ff');
-            localStorage.setItem('isPink2', 'true');
+            flike2.click(function() {
+            foutfit2.css('background-color', '#ffe6ff');
+            localStorage.setItem('fisPink2', 'true');
             });
             });
             
             $(document).ready(function() {
-            const outfit3 = $('#o3');
-            const like3 = $('#like3');
+            const foutfit3 = $('#fo3');
+            const flike3 = $('#flike3');
 
-            const isPink3 = localStorage.getItem('isPink3');
-            if (isPink3 === 'true') {
-            outfit3.css('background-color', '#ffe6ff');
+            const fisPink3 = localStorage.getItem('fisPink3');
+            if (fisPink3 === 'true') {
+            foutfit3.css('background-color', '#ffe6ff');
             }
 
-            like3.click(function() {
-            outfit3.css('background-color', '#ffe6ff');
-            localStorage.setItem('isPink3', 'true');
+            flike3.click(function() {
+            foutfit3.css('background-color', '#ffe6ff');
+            localStorage.setItem('fisPink3', 'true');
             });
             });
             
             $(document).ready(function() {
-            const outfit4 = $('#o4');
-            const like4 = $('#like4');
+            const foutfit4 = $('#fo4');
+            const flike4 = $('#flike4');
 
-            const isPink = localStorage.getItem('isPink4');
-            if (isPink4 === 'true') {
-            outfit4.css('background-color', '#ffe6ff');
+            const fisPink = localStorage.getItem('fisPink4');
+            if (fisPink4 === 'true') {
+            foutfit4.css('background-color', '#ffe6ff');
             }
 
-            like4.click(function() {
-            outfit4.css('background-color', '#ffe6ff');
-            localStorage.setItem('isPink4', 'true');
+            flike4.click(function() {
+            foutfit4.css('background-color', '#ffe6ff');
+            localStorage.setItem('fisPink4', 'true');
             });
             });
             
