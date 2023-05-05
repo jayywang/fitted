@@ -199,6 +199,16 @@
     </div>
 <br><br><br>
 
+<div id="results" style=" color: black;
+        font-weight: 100;
+        text-align: left;
+        line-height: normal;
+        background-color: #d3d3d3;
+        padding: 15px;
+        margin: 10px;
+        width: 90%;"></div>
+    </div>
+
     <div class="autoplay">
         <div class="testpics"><a href="https://jayywang.github.io/fitted/spring/springoutfit3.html">
             <img
@@ -264,6 +274,7 @@
         width: 90%;"></div>
     </div>
 
+
 <br><br><br><br><br>
 
 
@@ -291,24 +302,9 @@
 
         $("#hownav").on("click", function () {
             $(".howsection").slideToggle(1000);
-        }) 
-    </script>
-
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="slick/slick.min.js"></script>
-
-<script type="text/javascript">
-  $(document).ready(function(){
-      $('.autoplay').slick({
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      autoplay: true,
-      autoplaySpeed: 1000,
-      });
-  });
-    
-    //=================SEARCH BAR================
+        })
+        
+        //=================SEARCH BAR================
 
 
         //outfit link 
@@ -395,6 +391,22 @@
 
             $("#results").html(entry);
         }
+    </script>
+
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+
+<script type="text/javascript">
+  $(document).ready(function(){
+      $('.autoplay').slick({
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      autoplay: true,
+      autoplaySpeed: 1000,
+      });
+  });
+    
 </script>
 
 </body>
