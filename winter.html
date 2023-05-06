@@ -73,6 +73,16 @@
                 <br><div class="like" id="wlike4">like</div>
                 </div>
         </div>
+        
+        <div id="results" style=" color: black;
+        font-weight: 100;
+        text-align: left;
+        line-height: normal;
+        background-color: #d3d3d3;
+        padding: 15px;
+        margin: 10px;
+        width: 90%;"></div>
+    </div>
     
     </div>
     <script>
@@ -188,7 +198,96 @@
             localStorage.setItem('wisPink4', 'true');
             });
             });
+        
+        //=================SEARCH BAR================
+
+
+//outfit link 
+var link = [];
+link.push('https://jayywang.github.io/fitted/spring/springoutfit1.html');
+link.push('https://jayywang.github.io/fitted/spring/springoutfit2.html');
+link.push('https://jayywang.github.io/fitted/spring/springoutfit3.html');
+link.push('https://jayywang.github.io/fitted/spring/springoutfit4.html');
+link.push('https://jayywang.github.io/fitted/summer/summeroutfit1.html');
+link.push('https://jayywang.github.io/fitted/summer/summeroutfit2.html');
+link.push('https://jayywang.github.io/fitted/summer/summeroutfit3.html');
+link.push('https://jayywang.github.io/fitted/summer/summeroutfit4.html');
+link.push('https://jayywang.github.io/fitted/fall/falloutfit1.html');
+link.push('https://jayywang.github.io/fitted/fall/falloutfit2.html');
+link.push('https://jayywang.github.io/fitted/fall/falloutfit3.html');
+link.push('https://jayywang.github.io/fitted/fall/falloutfit4.html');
+link.push('https://jayywang.github.io/fitted/winter/winteroutfit1.html');
+link.push('https://jayywang.github.io/fitted/winter/winteroutfit2.html');
+link.push('https://jayywang.github.io/fitted/winter/winteroutfit3.html');
+link.push('https://jayywang.github.io/fitted/winter/winteroutfit4.html');
+
+//outfit name
+var outfit = [];
+outfit.push('Garden Green');
+outfit.push('Black Gray');
+outfit.push('Casual Tans');
+outfit.push('Coffee Shop');
+outfit.push('Feeling Gray');
+outfit.push('Purple Haze');
+outfit.push('Dark Summer');
+outfit.push('Pastel Paradise');
+outfit.push('Lil Denim');
+outfit.push('Beige Day');
+outfit.push('Browning Browns');
+outfit.push('Black on Black');
+outfit.push('Corduroy Brown');
+outfit.push('Dark Chocolate');
+outfit.push('Comfortable Leather');
+outfit.push('Layered Green');
+
+//outfit key words (season, genre, color)
+var key = [];
+key.push('Spring, Short sleeve, T-shirt, Long pants, Hat, Bag, Sneakers, Sweatshirt, Beige, Green');
+key.push('Spring, Long sleeve, Long pants, Sneakers, Black, Gray');
+key.push('Spring, Short sleeve, Button-up, Long pants, Sneakers, Beige, Brown');
+key.push('Spring, Long sleeve, Long pants, Sneakers, White, Brown');
+key.push('Summer, Tank top, Long pants, Bag, Boots, Black, Gray');
+key.push('Summer, Short sleeve, Long pants, Hat, Sneakers, Black, Tan');
+key.push('Summer, Short sleeve, Button-up, Long pants, Loafers, Black, Tan');
+key.push('Summer, Short sleeve, T-shirt, Button-up, Bag, Short pants, Sneakers, White, Cream');
+key.push('Fall, Long sleeve, Button up, Skirt, Bag, Boots, Denim, Black, Blue, Brown');
+key.push('Fall, Long sleeve, Jacket, Coat, Sweater, Skirt, Bag, Sneakers, Beige, Cream, Green');
+key.push('Fall, Long sleeve, Jacket, Coat, Turtle neck, Blazer, Long Pants, Boots, Black, Brown, White');
+key.push('Fall, Long sleeve, T-shirt, Jacket, Long pants, Bag, Denim, Boots, Black, Gray');
+key.push('Winter, Long sleeve, Jacket, Turtleneck, Button-up, Long pants, Boots, Brown, Cream, Black');
+key.push('Winter, Long sleeve, Turtleneck, Long pants, Belt, Boots, Brown, Black');
+key.push('Winter, Long sleeve, Button-up, Jacket, Leather, Long pants, Boots, Black, White');
+key.push('Winter, Long sleeve, Sweater, Button-up, Jacket, Long pants, Belt, Boots, Black, Green, Brown, Cream, White');
+
+//direct to search area after 'enter'
+var searchBox = document.getElementById("search-box");
+searchBox.addEventListener("keypress", function (event) {
+    if (event.keyCode === 13) {
+        window.location.href = "index.html#results";
+        search();
+    }
+
+});
+
+function search() {
+    var entry = "";
+    var query = $("#search-box").val();
+    console.log(query)
+
+    for (var i = 0; i < link.length; i++) {
+        var link2 = link[i].toLowerCase();
+        var outfit2 = outfit[i].toLowerCase()
+        var key2 = key[i].toLowerCase();
+
+        if (link2.indexOf(query) != -1 || outfit2.indexOf(query) != -1 || key2.indexOf(query) != -1) {
+            entry += "<b><a href =" + " " + link[i] + " " + "style='text-decoration:none; color: black;'>" + outfit[i] + '</a>' + ":</b>" + "<br>" + key[i] + "<br><br>";
+        }
+    }
+
+    $("#results").html(entry);
+}
             
     </script>
+
     </body>
 </html>
